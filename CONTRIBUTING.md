@@ -2,7 +2,7 @@
 
 [Italiano](#contribuire)
 
-Thank you for helping to keep **Open Medical Informatics** accurate and up to date. This curriculum is edited by [Diletta Falcone](https://dilettafalcone.it); every proposal is reviewed before it is merged. The curriculum itself is in [README.it.md](README.it.md) (Italian) and [README.md](README.md) (English): the two files must always contain the same courses in the same order.
+Thank you for helping to keep **Open Medical Informatics** accurate and up to date. Every proposal is reviewed before it is merged. The curriculum itself is in [README.it.md](README.it.md) (Italian) and [README.md](README.md) (English): the two files must always contain the same courses in the same order.
 
 ## Source criteria
 
@@ -37,12 +37,12 @@ Courses, titles in the References and regulations keep their original form (lang
 - Proposals that do not meet the criteria are closed with a short explanation.
 - Do not post patient data anywhere, neither in the repository nor in issues.
 
-After a change to the READMEs, the pages of the website are regenerated with `python tools/genera_pagine.py` (by the curator).
+After a change to the READMEs, the pages of the website are regenerated with `python tools/genera_pagine.py`.
 
 ## Review schedule
 
 - **Links:** checked automatically every month (GitHub Actions, workflow "Link check", which opens an issue if it finds broken links). Pages that block bots (for example eur-lex.europa.eu) are excluded and checked by hand.
-- **Content:** full review once a year by the curator; the "Revised" date at the top of the READMEs is updated when it is done.
+- **Content:** full review once a year; the "Revised" date at the top of the READMEs is updated when it is done.
 
 ---
 
@@ -50,7 +50,7 @@ After a change to the READMEs, the pages of the website are regenerated with `py
 
 [English](#contributing)
 
-Grazie per l'aiuto nel mantenere **Open Medical Informatics** corretto e aggiornato. Il curriculum è curato da [Diletta Falcone](https://dilettafalcone.it); ogni proposta viene rivista prima di essere accolta. Il curriculum sta in [README.it.md](README.it.md) (italiano) e [README.md](README.md) (inglese): i due file devono contenere sempre gli stessi corsi, nello stesso ordine.
+Grazie per l'aiuto nel mantenere **Open Medical Informatics** corretto e aggiornato. Ogni proposta viene rivista prima di essere accolta. Il curriculum sta in [README.it.md](README.it.md) (italiano) e [README.md](README.md) (inglese): i due file devono contenere sempre gli stessi corsi, nello stesso ordine.
 
 ## Criteri per le fonti
 
@@ -85,9 +85,9 @@ I nomi dei corsi, i titoli in Bibliografia e le norme restano nella forma origin
 - Le proposte che non rispettano i criteri vengono chiuse con una breve spiegazione.
 - Non pubblicare dati di pazienti da nessuna parte: né nel repository, né nelle issue.
 
-Dopo una modifica ai README, le pagine del sito si rigenerano con `python tools/genera_pagine.py` (a cura della curatrice).
+Dopo una modifica ai README, le pagine del sito si rigenerano con `python tools/genera_pagine.py`.
 
 ## Calendario delle revisioni
 
 - **Link:** controllo automatico ogni mese (GitHub Actions, workflow «Link check», che apre una issue se trova link rotti). Le pagine che bloccano i bot (per esempio eur-lex.europa.eu) sono escluse e controllate a mano.
-- **Contenuti:** revisione completa una volta all'anno a cura della curatrice; la data «Revisione» in cima ai README si aggiorna quando è fatta.
+- **Contenuti:** revisione completa una volta all'anno; la data «Revisione» in cima ai README si aggiorna quando è fatta.

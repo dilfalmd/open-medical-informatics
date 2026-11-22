@@ -6,7 +6,7 @@
 
 Sul modello di [OSSU Computer Science](https://github.com/ossu/computer-science), per chi parte da zero in informatica: un tronco comune (livelli 0–5), poi un indirizzo a scelta, *Clinico-ponte* (guida i progetti, scrive poco codice) o *Clinico-sviluppatore* (programma e analizza).
 
-Curatrice: [Diletta Falcone](https://dilettafalcone.it) · Revisione: 22/11/2026
+Revisione: 22/11/2026
 
 ## Principi
 
@@ -30,7 +30,7 @@ I livelli 0–5 si fanno in ordine, poi si sceglie un indirizzo (A o B). I numer
 | Definizione di informatica biomedica e competenze in informatica medica | AMIA (Kulikowski et al., 2012) [3] e IMIA (Mantas et al., 2010) [4]. [PubMed 22683918](https://pubmed.ncbi.nlm.nih.gov/22683918/), [PubMed 20054502](https://pubmed.ncbi.nlm.nih.gov/20054502/) | Società scientifica, Peer-reviewed | EN | ~4 h (stima) | Nessuno | Due articoli di riferimento su che cos'è la disciplina e quali competenze servono. |
 | Introduction to Biomedical Informatics | CHOP OPEN, Children's Hospital of Philadelphia (Bonafide, seminario 2022). [Link](https://open.chop.edu/?p=8933) | Istituzione (ospedale universitario) | EN | ~1 h | Nessuno | Gratuito con account. Una sola lezione, la pagina avverte che può essere datata. |
 | Global strategy on digital health 2020–2025 | OMS, 2021. [Link](https://www.who.int/publications/i/item/9789240020924) [5] | Istituzione | EN | ~3 h (stima) | Nessuno | PDF gratuito (CC BY-NC-SA 3.0 IGO). Sintesi e principi. |
-| Sanità digitale in Italia: FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6 | Ministero della Salute: [FSE](https://www.salute.gov.it/new/it/tema/fascicolo-sanitario-elettronico/), [PNRR Missione Salute](https://www.salute.gov.it/new/it/tema/pnrr-missione-salute/); portale nazionale [fascicolosanitario.gov.it](https://www.fascicolosanitario.gov.it/); decreti [6] [7] | Istituzione | IT | ~4 h (stima) | Nessuno | Lettura guidata, non un corso. Il decreto FSE 2.0 è del 7 settembre 2023 [6]; l'EDS è istituito dal decreto del 31 dicembre 2024 [7]. |
+| Sanità digitale in Italia: FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6 | Ministero della Salute: [Sanità digitale](https://www.salute.gov.it/new/it/sanita-digitale/), [PNRR Missione Salute](https://www.pnrr.salute.gov.it/); portale nazionale [fascicolosanitario.gov.it](https://www.fascicolosanitario.gov.it/); decreti [6] [7] | Istituzione | IT | ~4 h (stima) | Nessuno | Lettura guidata, non un corso. Il decreto FSE 2.0 è del 7 settembre 2023 [6]; l'EDS è istituito dal decreto del 31 dicembre 2024 [7]. |
 | Collaborative Data Science for Healthcare (HST.953, 2020), lezioni introduttive | MIT OpenCourseWare / MIT Critical Data. [Link](https://ocw.mit.edu/courses/hst-953-collaborative-data-science-for-healthcare-fall-2020) | Università | EN | ~3 h (stima) | Nessuno | Solo le prime lezioni, per una panoramica; il resto torna nei livelli 3 e 5. |
 
 ---

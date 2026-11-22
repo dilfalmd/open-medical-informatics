@@ -6,7 +6,7 @@
 
 Modelled on [OSSU Computer Science](https://github.com/ossu/computer-science), for those starting from zero in computing: a common core (levels 0–5), then a track of your choice, *Clinician-Bridge* (leads projects, writes little code) or *Clinician-Developer* (programs and analyses data).
 
-Curator: [Diletta Falcone](https://dilettafalcone.it) · Revised: 22 Nov 2026
+Revised: 22 Nov 2026
 
 ## Principles
 
@@ -30,7 +30,7 @@ Levels 0–5 are taken in order, then you choose a track (A or B). Numbers in sq
 | Definition of biomedical informatics and competencies in medical informatics | AMIA (Kulikowski et al., 2012) [3] and IMIA (Mantas et al., 2010) [4]. [PubMed 22683918](https://pubmed.ncbi.nlm.nih.gov/22683918/), [PubMed 20054502](https://pubmed.ncbi.nlm.nih.gov/20054502/) | Scientific society, Peer-reviewed | EN | ~4 h (estimate) | None | Two reference articles on what the discipline is and which competencies are needed. |
 | Introduction to Biomedical Informatics | CHOP OPEN, Children's Hospital of Philadelphia (Bonafide, 2022 seminar). [Link](https://open.chop.edu/?p=8933) | Institution (university hospital) | EN | ~1 h | None | Free with an account. A single lecture; the page warns that it may be dated. |
 | Global strategy on digital health 2020–2025 | WHO, 2021. [Link](https://www.who.int/publications/i/item/9789240020924) [5] | Institution | EN | ~3 h (estimate) | None | Free PDF (CC BY-NC-SA 3.0 IGO). Summary and principles. |
-| Digital health in Italy: FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6 | Ministero della Salute: [FSE](https://www.salute.gov.it/new/it/tema/fascicolo-sanitario-elettronico/), [PNRR Missione Salute](https://www.salute.gov.it/new/it/tema/pnrr-missione-salute/); national portal [fascicolosanitario.gov.it](https://www.fascicolosanitario.gov.it/); decrees [6] [7] | Institution | IT | ~4 h (estimate) | None | Guided reading, not a course. The FSE 2.0 decree is dated 7 September 2023 [6]; the EDS was established by the decree of 31 December 2024 [7]. |
+| Digital health in Italy: FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6 | Ministero della Salute: [Sanità digitale](https://www.salute.gov.it/new/it/sanita-digitale/), [PNRR Missione Salute](https://www.pnrr.salute.gov.it/); national portal [fascicolosanitario.gov.it](https://www.fascicolosanitario.gov.it/); decrees [6] [7] | Institution | IT | ~4 h (estimate) | None | Guided reading, not a course. The FSE 2.0 decree is dated 7 September 2023 [6]; the EDS was established by the decree of 31 December 2024 [7]. |
 | Collaborative Data Science for Healthcare (HST.953, 2020), introductory lectures | MIT OpenCourseWare / MIT Critical Data. [Link](https://ocw.mit.edu/courses/hst-953-collaborative-data-science-for-healthcare-fall-2020) | University | EN | ~3 h (estimate) | None | Only the first lectures, for an overview; the rest returns in levels 3 and 5. |
 
 ---

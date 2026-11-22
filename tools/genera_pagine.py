@@ -532,15 +532,15 @@ def render_page(lang, doc, ids, errors):
 
     # -- testata ------------------------------------------------------------
     # dopo il titolo: sottotitolo (in grassetto), paragrafo introduttivo,
-    # riga di servizio (curatrice, revisione, link) con voci separate da " · "
+    # riga di servizio (revisione, eventuali altri metadati) con voci separate da " · "
     paras = [b[1] for b in doc.intro if b[0] == "p"]
     if len(paras) < 3:
-        raise Errori("%s: dopo il titolo servono sottotitolo, introduzione e riga della curatrice" % doc.path.name)
+        raise Errori("%s: dopo il titolo servono sottotitolo, introduzione e riga di servizio" % doc.path.name)
     lead = re.sub(r"^\*\*(.+)\*\*$", r"\1", paras[0])
     meta_list = [x.strip() for x in paras[-1].split(" · ")]
     rest = [("p", x) for x in paras[1:-1]]
     if not any(REVISION_RE.match(plain(x)) for x in meta_list):
-        raise Errori("%s: manca la voce «Revisione»/«Revised» nella riga della curatrice" % doc.path.name)
+        raise Errori("%s: manca la voce «Revisione»/«Revised» nella riga di servizio" % doc.path.name)
     add('    <section class="wrap page-head">')
     add('      <p class="eyebrow">%s</p>' % esc(L["eyebrow"]))
     add("      <h1>%s</h1>" % inline(doc.title))
