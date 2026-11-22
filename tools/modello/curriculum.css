@@ -150,14 +150,12 @@ nav.toc { border-bottom: 0; }
   color: var(--muted);
 }
 .meta dd { margin: 2px 0 0; font-size: 15px; line-height: 1.55; overflow-wrap: anywhere; }
-.progetto-testo { margin: 12px 0 0 !important; font-size: 15px; }
 
 @media (min-width: 720px) {
   .meta { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-left: 34px; }
-  .progetto-testo { margin-left: 34px !important; }
 }
 
-/* Tabelle generiche (durata complessiva): su telefono diventano schede */
+/* Tabelle generiche: su telefono diventano schede */
 .tabella { margin: 0 0 18px; }
 .tabella table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .tabella th, .tabella td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }

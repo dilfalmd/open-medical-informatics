@@ -2,209 +2,150 @@
 
 # Open Medical Informatics
 
-**A free curriculum for physicians who want to become clinical informaticians.**
+**A free medical informatics curriculum for physicians.**
 
-- Last revised: 22 November 2026
-- Full review once a year; automatic link check every month
-- Curator: [Diletta Falcone](https://dilettafalcone.it)
+Modelled on [OSSU Computer Science](https://github.com/ossu/computer-science), for those starting from zero in computing: a common core (levels 0–5), then a track of your choice, *Clinician-Bridge* (leads projects, writes little code) or *Clinician-Developer* (programs and analyses data).
 
-Verification date of all links: **22 Nov 2026** (also stated in the "Source" column).
-
-**Purpose.** A free curriculum, modelled on [OSSU Computer Science](https://github.com/ossu/computer-science) (verified 22 Nov 2026), that takes a physician starting from zero in computing and leads them to become a clinical informatician, in two tracks: *Clinician-Bridge* (leads projects, writes little code) and *Clinician-Developer* (programs and analyses data).
+Curator: [Diletta Falcone](https://dilettafalcone.it) · Revised: 22 Nov 2026, fully reviewed every year · Links verified on 22 Nov 2026 and checked every month · Training guide: it does not replace accredited training or the advice of experts.
 
 ## Principles
 
-1. **Free.** Free resources only. "Audit" courses are allowed and flagged in the Notes. No master's degrees, certifications or paid books.
-2. **Authoritative sources only, always cited.** See "Source criteria" below. Every statement of fact (regulations, figures, definitions) points to a numbered entry in the References.
-3. **Start from zero in computing, not in medicine.** Clinical knowledge is taken for granted. The programming language is **Python** throughout the guide (R appears in a single optional entry for those doing clinical research).
-4. **The bare minimum in the common core.** The common core contains only what every clinical informatician needs; technical deep dives are in Track B or optional. Finish what you start; levels are taken in order.
-5. **Build things.** Every level ends with something that works (a script, a query, a mapped dataset, an evaluation). Real patient data is never used for practice.
-6. **Italian and European context.** Where an Italian source of comparable quality exists, it is preferred (FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6, Garante, AgID, ISS; at EU level GDPR art. 9, EHDS, AI Act, MDR).
-7. **Studying with AI.** AI assistants are used as tutors (explaining a concept another way, generating exercises, correcting your own code), with three rules: (a) **always verify** every fact, regulation, figure or reference against a primary source in the references, because models can invent plausible citations and numbers [1]; (b) **never paste patient data**, neither identifiable nor presumed anonymous: health data are special categories of personal data (GDPR art. 9) [2]; (c) write the code and the exercise answers yourself, using AI to understand and not to hand in.
-
-## Disclaimer
-
-This is a training guide: it does not replace accredited training or the advice of experts (clinicians, lawyers, data protection officers). The resources belong to third parties and may change, move or become paid: every entry states the date of its last verification.
-
-## Source criteria
-
-The full rules for proposing an entry are in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-**Allowed**
-- Universities, including Italian ones (for example Federica Web Learning, EduOpen).
-- Standards bodies: HL7, DICOM/NEMA, SNOMED International, Regenstrief/LOINC, WHO/ICD, OHDSI.
-- Institutions: WHO, European Commission and Parliament, Ministero della Salute, ISS, AGENAS, AgID, Garante per la protezione dei dati personali.
-- Peer-reviewed literature (PubMed/PMC, EQUATOR Network).
-- Scientific societies: AMIA, IMIA, EFMI.
-- Recognised non-academic organisations (for example DeepLearning.AI, fast.ai, Google ML Crash Course, Kaggle Learn, Microsoft Learn, Hugging Face): source type "Industry", only if the courses are free and by recognised authors.
-
-**Excluded**
-- Non-institutional blogs and YouTube channels.
-- Vendor marketing material.
-- Preprints that have not been peer reviewed (excluded entirely).
-- Paid resources (master's degrees, certifications, books).
-
-**For every entry:** author or body, link verification date, source type, numbered pointer to the References (Vancouver style, with DOI or PMID for articles; full details for regulations).
+- **Free:** free resources only ("audit" courses are flagged in the Notes).
+- **Authoritative sources, always cited:** every entry points to the References; the rules for proposing an entry are in [CONTRIBUTING.md](CONTRIBUTING.md).
+- **From zero in computing, not in medicine:** you program in **Python** and build something at every level, never with real patient data.
+- **AI as a tutor:** always verify every fact against a primary source [1], never paste patient data [2], write the exercise code yourself.
 
 ## How to use this guide
 
-- **Reference pace: 5–8 hours per week.** Durations in weeks are computed at **6.5 hours/week**, rounded to half a week (minimum 0.5); at 8 hours multiply by 0.8, at 5 hours by 1.3. Durations are indicative estimates. "Hours" are **the curator's estimates** when the source does not state them (the Effort column marks them as "estimate").
-- **Path:** levels 0–5 (common core, ~50 weeks) → one track (A or B) → optional electives → the track's final project.
-- **Columns.** *Source* = body or author, link, verification date. *Source type* = University / Standards body / Institution / Peer-reviewed / Scientific society / Industry / Open materials (independent authors or groups). Numbers in square brackets point to the References at the end.
-- **Language.** Almost all technical courses are in English: standards are written in English. Where a free course in Italian from an authoritative source exists (Federica, Elements of AI, ISS, Garante, Ministero) it is indicated.
+Levels 0–5 are taken in order, then you choose a track (A or B). Hours are the curator's estimates when the source does not state them ("estimate" in the Effort column); numbers in square brackets point to the References.
 
 ---
 
 ## Level 0 · Introduction
 
-**Goal:** understand what biomedical informatics is, which roles exist, and how the Italian digital health system is organised. **Total: ~15 hours, about 2.5 weeks.**
+**Goal:** understand what biomedical informatics is, which roles exist, and how the Italian digital health system is organised. **Total: ~15 hours.**
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Definition of biomedical informatics and competencies of the clinical informatician | AMIA (Kulikowski et al., 2012) [3] and IMIA (Mantas et al., 2010) [4]. [PubMed 22683918](https://pubmed.ncbi.nlm.nih.gov/22683918/), [PubMed 20054502](https://pubmed.ncbi.nlm.nih.gov/20054502/). Verified 22 Nov 2026 | Scientific society, Peer-reviewed | EN | 0.5 wk | ~4 h (estimate) | None | Two reference articles on what the discipline is and which competencies are needed. |
-| Introduction to Biomedical Informatics | CHOP OPEN, Children's Hospital of Philadelphia (Bonafide, 2022 seminar). [Link](https://open.chop.edu/?p=8933). Verified 22 Nov 2026 | Institution (university hospital) | EN | 0.5 wk | ~1 h | None | Free with an account. A single lecture; the page warns that it may be dated. |
-| Global strategy on digital health 2020–2025 | WHO, 2021. [Link](https://www.who.int/publications/i/item/9789240020924). Verified 22 Nov 2026 [5] | Institution | EN | 0.5 wk | ~3 h (estimate) | None | Free PDF (CC BY-NC-SA 3.0 IGO). Summary and principles. |
-| Digital health in Italy: FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6 | Ministero della Salute: [FSE](https://www.salute.gov.it/new/it/tema/fascicolo-sanitario-elettronico/), [PNRR Missione Salute](https://www.salute.gov.it/new/it/tema/pnrr-missione-salute/); national portal [fascicolosanitario.gov.it](https://www.fascicolosanitario.gov.it/); decrees [6] [7]. Verified 22 Nov 2026 | Institution | IT | 0.5 wk | ~4 h (estimate) | None | Guided reading, not a course. The FSE 2.0 decree is dated 7 September 2023 [6]; the EDS was established by the decree of 31 December 2024 [7]. |
-| Collaborative Data Science for Healthcare (HST.953, 2020), introductory lectures | MIT OpenCourseWare / MIT Critical Data. [Link](https://ocw.mit.edu/courses/hst-953-collaborative-data-science-for-healthcare-fall-2020). Verified 22 Nov 2026 | University | EN | 0.5 wk | ~3 h (estimate) | None | Only the first lectures, for an overview; the rest returns in levels 3 and 5. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Definition of biomedical informatics and competencies in medical informatics | AMIA (Kulikowski et al., 2012) [3] and IMIA (Mantas et al., 2010) [4]. [PubMed 22683918](https://pubmed.ncbi.nlm.nih.gov/22683918/), [PubMed 20054502](https://pubmed.ncbi.nlm.nih.gov/20054502/) | Scientific society, Peer-reviewed | EN | ~4 h (estimate) | None | Two reference articles on what the discipline is and which competencies are needed. |
+| Introduction to Biomedical Informatics | CHOP OPEN, Children's Hospital of Philadelphia (Bonafide, 2022 seminar). [Link](https://open.chop.edu/?p=8933) | Institution (university hospital) | EN | ~1 h | None | Free with an account. A single lecture; the page warns that it may be dated. |
+| Global strategy on digital health 2020–2025 | WHO, 2021. [Link](https://www.who.int/publications/i/item/9789240020924) [5] | Institution | EN | ~3 h (estimate) | None | Free PDF (CC BY-NC-SA 3.0 IGO). Summary and principles. |
+| Digital health in Italy: FSE 2.0, Ecosistema Dati Sanitari, PNRR Missione 6 | Ministero della Salute: [FSE](https://www.salute.gov.it/new/it/tema/fascicolo-sanitario-elettronico/), [PNRR Missione Salute](https://www.salute.gov.it/new/it/tema/pnrr-missione-salute/); national portal [fascicolosanitario.gov.it](https://www.fascicolosanitario.gov.it/); decrees [6] [7] | Institution | IT | ~4 h (estimate) | None | Guided reading, not a course. The FSE 2.0 decree is dated 7 September 2023 [6]; the EDS was established by the decree of 31 December 2024 [7]. |
+| Collaborative Data Science for Healthcare (HST.953, 2020), introductory lectures | MIT OpenCourseWare / MIT Critical Data. [Link](https://ocw.mit.edu/courses/hst-953-collaborative-data-science-for-healthcare-fall-2020) | University | EN | ~3 h (estimate) | None | Only the first lectures, for an overview; the rest returns in levels 3 and 5. |
 
 ---
 
 ## Level 1 · Computing basics
 
-**Goal (bare minimum):** write small programs in Python, work from the command line with git, and query a database with SQL. **Total: ~65 hours, about 10 weeks.** The full CS50P course and algorithms are moved to Track B.
+**Goal (bare minimum):** write small programs in Python, work from the command line with git, and query a database with SQL. **Total: ~65 hours.** The full CS50P course and algorithms are moved to Track B.
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Python for Everybody | C. R. Severance, [py4e.com](https://www.py4e.com/) [8]. Verified 22 Nov 2026 | Open materials | EN | 5.5 wk | ~35 h (estimate) | None | Free materials (book, videos, exercises); certificates are elsewhere. Chapters on variables, loops, functions, strings, files, lists, dictionaries: enough for the common core. |
-| The Missing Semester of Your CS Education | MIT (CSAIL / MIT Open Learning). [Link](https://missing.csail.mit.edu/). Verified 22 Nov 2026 | University | EN | 1.5 wk | ~10 h (estimate) | Basic Python | Notes under an open licence, CC BY-NC-SA. Only the lectures on the shell, editors and version control (git) are followed. |
-| CS50's Introduction to Databases with SQL (weeks 0–3) | Harvard University (CS50). [Link](https://cs50.harvard.edu/sql/). Verified 22 Nov 2026 | University | EN | 3 wk | ~20 h (estimate) | None | Free via OpenCourseWare; the full course is 7 weeks plus a project (as stated by the source), here only the first ones: SQLite, joins, normalisation. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Python for Everybody | C. R. Severance, [py4e.com](https://www.py4e.com/) [8] | Open materials | EN | ~35 h (estimate) | None | Free materials (book, videos, exercises); certificates are elsewhere. Chapters on variables, loops, functions, strings, files, lists, dictionaries: enough for the common core. |
+| The Missing Semester of Your CS Education | MIT (CSAIL / MIT Open Learning). [Link](https://missing.csail.mit.edu/) | University | EN | ~10 h (estimate) | Basic Python | Notes under an open licence, CC BY-NC-SA. Only the lectures on the shell, editors and version control (git) are followed. |
+| CS50's Introduction to Databases with SQL (first lectures) | Harvard University (CS50). [Link](https://cs50.harvard.edu/sql/) | University | EN | ~20 h (estimate) | None | Free via OpenCourseWare; here only the first lectures: SQLite, joins, normalisation. |
 
 ---
 
 ## Level 2 · Data and statistics (in Python)
 
-**Goal (bare minimum):** read and write a correct statistical analysis of clinical data, clean data, make honest charts. **Total: ~60 hours, about 9 weeks.**
+**Goal (bare minimum):** read and write a correct statistical analysis of clinical data, clean data, make honest charts. **Total: ~60 hours.**
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Think Stats: Exploratory Data Analysis in Python (3rd ed.) | A. B. Downey [9]. [Link](https://allendowney.github.io/ThinkStats/). Verified 22 Nov 2026 | Open materials | EN | 4.5 wk | ~30 h (estimate) | Level 1 | Free online (Creative Commons licence), with executable notebooks on Google Colab. Probability, distributions, estimation, hypothesis tests, regression, survival analysis. |
-| Python Data Science Handbook (NumPy, pandas, Matplotlib) | J. VanderPlas [10]. [Link](https://jakevdp.github.io/PythonDataScienceHandbook/). Verified 22 Nov 2026 | **Industry** (publisher O'Reilly; text free online, CC-BY-NC-ND licence) | EN | 3 wk | ~20 h (estimate) | Level 1 | Only chapters 2–4. |
-| Guided analysis of real anonymised clinical data: MIMIC-IV demo | PhysioNet / MIT Laboratory for Computational Physiology. [Demo](https://physionet.org/content/mimic-iv-demo/); article [11]. Verified 22 Nov 2026 | Institution, Peer-reviewed | EN | 1.5 wk | ~10 h (estimate) | The two previous entries | The demo is openly accessible (the full dataset requires credentialing, see project B). Exercise: cohort, descriptive statistics, a regression model. |
-| *(optional, for those doing clinical research)* Introduction to Statistics for the Life and Biomedical Sciences, with exercises in **R** | OpenIntro [12]. [Link](https://www.openintro.org/book/biostat/). Verified 22 Nov 2026 | Open materials | EN | 7.5 wk | ~50 h (estimate) | Level 1 | Free PDF (the price can be set to $0). Linear and logistic regression, survival. It is the only R entry; excluded from the total. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Think Stats: Exploratory Data Analysis in Python (3rd ed.) | A. B. Downey [9]. [Link](https://allendowney.github.io/ThinkStats/) | Open materials | EN | ~30 h (estimate) | Level 1 | Free online (Creative Commons licence), with executable notebooks on Google Colab. Probability, distributions, estimation, hypothesis tests, regression, survival analysis. |
+| Python Data Science Handbook (NumPy, pandas, Matplotlib) | J. VanderPlas [10]. [Link](https://jakevdp.github.io/PythonDataScienceHandbook/) | **Industry** (publisher O'Reilly; text free online, CC-BY-NC-ND licence) | EN | ~20 h (estimate) | Level 1 | Only chapters 2–4. |
+| Guided analysis of real anonymised clinical data: MIMIC-IV demo | PhysioNet / MIT Laboratory for Computational Physiology. [Demo](https://physionet.org/content/mimic-iv-demo/); article [11] | Institution, Peer-reviewed | EN | ~10 h (estimate) | The two previous entries | The demo is openly accessible. Exercise: cohort, descriptive statistics, a regression model. |
+| *(optional, for those doing clinical research)* Introduction to Statistics for the Life and Biomedical Sciences, with exercises in **R** | OpenIntro [12]. [Link](https://www.openintro.org/book/biostat/) | Open materials | EN | ~50 h (estimate) | Level 1 | Free PDF (the price can be set to $0). Linear and logistic regression, survival. It is the only R entry; excluded from the total. |
 
 ---
 
 ## Level 3 · Health informatics
 
-**Goal (bare minimum):** understand how clinical data are represented and exchanged (standards and terminologies), use FHIR and OMOP at a basic level, and recognise how decision support and human factors determine the real-world use of a system. **Total: ~65 hours, about 10 weeks.** The materials are those published free of charge by the standards bodies.
+**Goal (bare minimum):** understand how clinical data are represented and exchanged (standards and terminologies), use FHIR and OMOP at a basic level, and recognise how decision support and human factors determine the real-world use of a system. **Total: ~65 hours.** The materials are those published free of charge by the standards bodies.
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Terminologies: SNOMED CT, LOINC, ICD-11 (with an overview of standards) | **SNOMED International**: [education](https://www.snomed.org/education) (introductory tutorials accessible without an account); **Regenstrief**: [LOINC](https://www.regenstrief.org/real-world-solutions/loinc/) (LOINC is free); **WHO**: [ICD-11 Training Package](https://icdcdn.who.int/icd11training/index.html) [13]; **NLM**: [tutorial on standards and terminologies](https://www.nlm.nih.gov/oet/ed/healthdatastandards/index.html) [14]. Verified 22 Nov 2026 | Standards body (SNOMED, Regenstrief, WHO); Institution (NLM) | EN | 3 wk | ~19 h (estimate) | Level 0 | **Italy does not appear among the member countries of SNOMED International** (list of 54–55 members, consulted on 22 Nov 2026) [15]: the official courses are free for members and paid outside the members [16], so the introductory tutorials and the NLM tutorial are used here. |
-| HL7 FHIR: concepts, resources, REST and search | HL7 International, FHIR specification [17]: [clinical overview](https://www.hl7.org/fhir/overview-clinical.html), [developer overview](https://www.hl7.org/fhir/overview-dev.html), [resource list](https://www.hl7.org/fhir/resourcelist.html), [search](https://www.hl7.org/fhir/search.html); NIH (NCPI), notebook [fhir-101](https://github.com/NIH-NCPI/fhir-101); HL7 Italia, [hl7.it](https://hl7.it/). Verified 22 Nov 2026 | Standards body, Institution | EN (HL7 Italia: IT) | 2 wk | ~12 h (estimate) | Level 1 | The official HL7 courses are not free: the specification's teaching material is studied, with the exercises of the NIH notebook. |
-| DICOM: data model and image flow | NEMA/MITA, DICOM Standard, Part PS3.1 [18]: [PS3.1](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/PS3.1.html), [presentation of the standard](https://www.dicomstandard.org/about). Verified 22 Nov 2026 | Standards body | EN | 0.5 wk | ~4 h (estimate) | Level 1 | Only the introduction and overview, not the whole standard. |
-| OMOP CDM and OHDSI | OHDSI, *The Book of OHDSI* [19] (CC0): [link](https://ohdsi.github.io/TheBookOfOhdsi/); EHDEN Academy (European consortium): [link](https://academy.ehden.eu/). Verified 22 Nov 2026 | Standards body (OHDSI) | EN | 2 wk | ~12 h (estimate) | Levels 1–2 (SQL) | EHDEN Academy: free, with an account (confirmed by EHDEN sources). Chapters 4–6 of the book (CDM, vocabularies, ETL). Reference article: Hripcsak et al. [20]. |
-| Electronic health records and secondary data analysis | MIT Critical Data, *Secondary Analysis of Electronic Health Records* (Springer, 2016, open access) [21]. [Link](https://www.ncbi.nlm.nih.gov/books/NBK543627/). Verified 22 Nov 2026 | University (open-access book) | EN | 1.5 wk | ~10 h (estimate) | Level 2 | Choose the chapters on data cleaning, bias and study design. |
-| Clinical decision support, human factors and workflows | Sutton et al. 2020 [22]; Zhang and Walji (TURF) 2011 [23]; NIST, NISTIR 7741 [24]: [link](https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7741.pdf); HL7, [CDS Hooks](https://cds-hooks.org/). Verified 22 Nov 2026 | Peer-reviewed, Institution | EN | 1 wk | ~8 h (estimate) | Level 0 | Two articles and a NIST guide on the usability of health records; CDS Hooks to integrate decision support into the clinical workflow. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Terminologies: SNOMED CT, LOINC, ICD-11 (with an overview of standards) | **SNOMED International**: [education](https://www.snomed.org/education) (introductory tutorials accessible without an account); **Regenstrief**: [LOINC](https://www.regenstrief.org/real-world-solutions/loinc/) (LOINC is free); **WHO**: [ICD-11 Training Package](https://icdcdn.who.int/icd11training/index.html) [13]; **NLM**: [tutorial on standards and terminologies](https://www.nlm.nih.gov/oet/ed/healthdatastandards/index.html) [14] | Standards body (SNOMED, Regenstrief, WHO); Institution (NLM) | EN | ~19 h (estimate) | Level 0 | **Italy does not appear among the member countries of SNOMED International** (list of 54–55 members, consulted on 22 Nov 2026) [15]: the official courses are free for members and paid outside the members [16], so the introductory tutorials and the NLM tutorial are used here. |
+| HL7 FHIR: concepts, resources, REST and search | HL7 International, FHIR specification [17]: [clinical overview](https://www.hl7.org/fhir/overview-clinical.html), [developer overview](https://www.hl7.org/fhir/overview-dev.html), [resource list](https://www.hl7.org/fhir/resourcelist.html), [search](https://www.hl7.org/fhir/search.html); NIH (NCPI), notebook [fhir-101](https://github.com/NIH-NCPI/fhir-101); HL7 Italia, [hl7.it](https://hl7.it/) | Standards body, Institution | EN (HL7 Italia: IT) | ~12 h (estimate) | Level 1 | The official HL7 courses are not free: the specification's teaching material is studied, with the exercises of the NIH notebook. |
+| DICOM: data model and image flow | NEMA/MITA, DICOM Standard, Part PS3.1 [18]: [PS3.1](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/PS3.1.html), [presentation of the standard](https://www.dicomstandard.org/about) | Standards body | EN | ~4 h (estimate) | Level 1 | Only the introduction and overview, not the whole standard. |
+| OMOP CDM and OHDSI | OHDSI, *The Book of OHDSI* [19] (CC0): [link](https://ohdsi.github.io/TheBookOfOhdsi/); EHDEN Academy (European consortium): [link](https://academy.ehden.eu/) | Standards body (OHDSI) | EN | ~12 h (estimate) | Levels 1–2 (SQL) | EHDEN Academy: free, with an account (confirmed by EHDEN sources). Chapters 4–6 of the book (CDM, vocabularies, ETL). Reference article: Hripcsak et al. [20]. |
+| Electronic health records and secondary data analysis | MIT Critical Data, *Secondary Analysis of Electronic Health Records* (Springer, 2016, open access) [21]. [Link](https://www.ncbi.nlm.nih.gov/books/NBK543627/) | University (open-access book) | EN | ~10 h (estimate) | Level 2 | Choose the chapters on data cleaning, bias and study design. |
+| Clinical decision support, human factors and workflows | Sutton et al. 2020 [22]; Zhang and Walji (TURF) 2011 [23]; NIST, NISTIR 7741 [24]: [link](https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7741.pdf); HL7, [CDS Hooks](https://cds-hooks.org/) | Peer-reviewed, Institution | EN | ~8 h (estimate) | Level 0 | Two articles and a NIST guide on the usability of health records; CDS Hooks to integrate decision support into the clinical workflow. |
 
 ---
 
 ## Level 4 · Regulation, privacy and cybersecurity in healthcare
 
-**Goal:** know what can be done with health data, when software is a medical device, and the fundamentals of cybersecurity in healthcare. **Total: ~35 hours, about 5.5 weeks.**
+**Goal:** know what can be done with health data, when software is a medical device, and the fundamentals of cybersecurity in healthcare. **Total: ~35 hours.**
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Cybersecurity: fundamentals and threats to healthcare | Harvard University (CS50), [CS50's Introduction to Cybersecurity](https://cs50.harvard.edu/cybersecurity/); ENISA, *Health Threat Landscape* (2023) [25]: [page](https://www.enisa.europa.eu/publications/health-threat-landscape). Verified 22 Nov 2026 | University, Institution | EN | 2 wk | ~14 h (estimate) | None | Of the CS50 course (5 weeks, as stated by the source) the parts on accounts, data and privacy are followed. The ENISA report analyses cybersecurity incidents in the EU health sector from January 2021 to March 2023. |
-| GDPR and health data (art. 9) | Regulation (EU) 2016/679 [2]: [text and page of the Garante](https://www.garanteprivacy.it/regolamentoue); Garante, [Sanità e ricerca scientifica](https://www.garanteprivacy.it/temi/sanita-e-ricerca-scientifica). Verified 22 Nov 2026 | Institution | IT | 1 wk | ~6 h (estimate) | Level 0 | Reading of art. 9 (special categories of data, including data concerning health) and of the Garante's decisions on healthcare. |
-| FSE 2.0 and Ecosistema Dati Sanitari: rules and privacy | Decreto 7 settembre 2023 (GU n. 249 del 24/10/2023) [6]: [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/gu/2023/10/24/249/sg/pdf); decreto 31 dicembre 2024 (GU n. 53 del 5/3/2025) [7]: [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/gu/2025/03/05/53/sg/pdf); Garante, [FAQ sul fascicolo sanitario](https://www.garanteprivacy.it/faq/fascicolo-sanitario). Verified 22 Nov 2026 | Institution | IT | 1 wk | ~6 h (estimate) | Level 0 | The 2023 decree has been amended by later decrees: always read the most recent consolidated text. |
-| Software as a medical device (MDR) | Regulation (EU) 2017/745 [26]; European Commission, MDCG 2019-11 (qualification and classification of software) [27]: [MDCG page](https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en); Ministero della Salute, [dispositivi medici](https://www.salute.gov.it/new/it/tema/dispositivi-medici/). Verified 22 Nov 2026 | Institution | EN/IT | 1 wk | ~5 h (estimate) | Level 0 | When software is a medical device and how it is classified. |
-| European Health Data Space (EHDS) | Regulation (EU) 2025/327 [28]; European Commission, [EHDS page](https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en). Verified 22 Nov 2026 | Institution | EN/IT | 0.5 wk | ~4 h (estimate) | Level 0 | Published in the Official Journal of the EU on 5 March 2025. Application dates are staggered: check the Commission's page. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Cybersecurity: fundamentals and threats to healthcare | Harvard University (CS50), [CS50's Introduction to Cybersecurity](https://cs50.harvard.edu/cybersecurity/); ENISA, *Health Threat Landscape* (2023) [25]: [page](https://www.enisa.europa.eu/publications/health-threat-landscape) | University, Institution | EN | ~14 h (estimate) | None | Of the CS50 course the parts on accounts, data and privacy are followed. The ENISA report analyses cybersecurity incidents in the EU health sector from January 2021 to March 2023. |
+| GDPR and health data (art. 9) | Regulation (EU) 2016/679 [2]: [text and page of the Garante](https://www.garanteprivacy.it/regolamentoue); Garante, [Sanità e ricerca scientifica](https://www.garanteprivacy.it/temi/sanita-e-ricerca-scientifica) | Institution | IT | ~6 h (estimate) | Level 0 | Reading of art. 9 (special categories of data, including data concerning health) and of the Garante's decisions on healthcare. |
+| FSE 2.0 and Ecosistema Dati Sanitari: rules and privacy | Decreto 7 settembre 2023 (GU n. 249 del 24/10/2023) [6]: [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/gu/2023/10/24/249/sg/pdf); decreto 31 dicembre 2024 (GU n. 53 del 5/3/2025) [7]: [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/gu/2025/03/05/53/sg/pdf); Garante, [FAQ sul fascicolo sanitario](https://www.garanteprivacy.it/faq/fascicolo-sanitario) | Institution | IT | ~6 h (estimate) | Level 0 | The 2023 decree has been amended by later decrees: always read the most recent consolidated text. |
+| Software as a medical device (MDR) | Regulation (EU) 2017/745 [26]; European Commission, MDCG 2019-11 (qualification and classification of software) [27]: [MDCG page](https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en); Ministero della Salute, [dispositivi medici](https://www.salute.gov.it/new/it/tema/dispositivi-medici/) | Institution | EN/IT | ~5 h (estimate) | Level 0 | When software is a medical device and how it is classified. |
+| European Health Data Space (EHDS) | Regulation (EU) 2025/327 [28]; European Commission, [EHDS page](https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en) | Institution | EN/IT | ~4 h (estimate) | Level 0 | Published in the Official Journal of the EU on 5 March 2025. Application dates are staggered: check the Commission's page. |
 
 ---
 
 ## Level 5 · AI in medicine (core pillar)
 
-**Goal:** understand how ML, deep learning and LLMs work, what their limits are (hallucinations included), be able to evaluate a model clinically (validation, calibration, bias, reporting guidelines) and know ethics and rules (AI Act, MDR, WHO). **Total: ~87 hours, about 13 weeks.** Where possible, in Italian.
+**Goal:** understand how ML, deep learning and LLMs work, what their limits are (hallucinations included), be able to evaluate a model clinically (validation, calibration, bias, reporting guidelines) and know ethics and rules (AI Act, MDR, WHO). **Total: ~87 hours.** Where possible, in Italian.
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| AI fundamentals (in Italian) | University of Helsinki with MinnaLearn, *Elements of AI*, Italian version promoted by the Dipartimento per la trasformazione digitale: [link](https://www.elementsofai.it/). *(alternative)* Federica Web Learning, *Intelligenza artificiale e scienza dei dati - le basi*: [AI catalogue](https://www.federica.eu/intelligenza-artificiale/). Verified 22 Nov 2026 | University | **IT** | 3 wk | ~20 h (estimate) | None | Both are free (Federica states that all its courses are "100% gratuiti"). Federica requires registration to open the courses; duration not stated. |
-| Fundamentals of machine learning and deep learning | G. James, D. Witten, T. Hastie, R. Tibshirani, J. Taylor, *An Introduction to Statistical Learning with Applications in Python* (Springer, 2023) [29]: [link](https://www.statlearning.com/). *(alternative in Italian)* Federica Web Learning, *Machine Learning* (F. Stella): [AI catalogue](https://www.federica.eu/intelligenza-artificiale/). *(optional)* Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course). Verified 22 Nov 2026 | University (book, free PDF); the optional entry is **Industry** | EN (alternative IT) | 3 wk | ~20 h (estimate) | Levels 1–2 | Choose the chapters on regression, classification, model evaluation, trees and an introduction to neural networks. |
-| Generative AI and LLMs: how they work, limits, hallucinations, prompting | Politecnico di Milano, POK, *Data, Algorithms, and Ethical Challenges: Exploring the AI Revolution in Medicine* (free, 12 hours over 3 weeks): [link](https://www.pok.polimi.it/course/view.php?id=177) [30]. Articles: Thirunavukarasu et al. 2023 (LLMs in medicine) [31]; Meskó 2023 (prompting for healthcare professionals) [32]; Ji et al. 2023 (hallucinations) [1]. *(optional)* Stanford, CS324 *Large Language Models* (lecture notes): [link](https://stanford-cs324.github.io/winter2022/) [33]. Verified 22 Nov 2026 | University, Peer-reviewed | EN | 3 wk | ~19 h (12 h stated by the POK course + 7 h of articles, estimate) | Level 2 | The CS324 notes do not cite hallucinations: the articles cover them. |
-| Machine learning for healthcare | MIT 6.S897 / HST.956, *Machine Learning for Healthcare* (Sontag, Szolovits, 2019). [Link](https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/). Verified 22 Nov 2026 | University | EN | 1.5 wk | ~10 h (estimate) | Basic ML | Free notes and videos. Only a few lectures are followed (risk stratification, bias, interpretability); the full course assumes university-level ML. |
-| Clinical evaluation of models | TRIPOD+AI [34], CONSORT-AI [35], DECIDE-AI [36] (EQUATOR Network: [TRIPOD](https://www.equator-network.org/reporting-guidelines/tripod-statement/), [CONSORT-AI](https://www.equator-network.org/reporting-guidelines/consort-artificial-intelligence/), [DECIDE-AI](https://www.equator-network.org/reporting-guidelines/decide-ai/)); Van Calster et al. 2019, calibration [37]. Verified 22 Nov 2026 | Peer-reviewed, Scientific society (EQUATOR) | EN | 1 wk | ~8 h (estimate) | Level 2 | External validation, calibration, bias and checklists for reporting studies with AI. A checklist is applied to a real study. |
-| Ethics and regulation of AI in healthcare | WHO, *Ethics and governance of AI for health* (2021) [38]: [link](https://www.who.int/publications/i/item/9789240029200); WHO, guidance on *large multi-modal models* (2025) [39]: [link](https://www.who.int/publications/i/item/9789240084759); Regulation (EU) 2024/1689 (AI Act) [40]: [Commission page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai). Verified 22 Nov 2026 | Institution | EN/IT | 1.5 wk | ~10 h (estimate) | Level 4 | WHO documents as free PDFs (CC BY-NC-SA 3.0 IGO). For the AI Act and its relationship with the MDR use the official text in the EU Official Journal. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| AI fundamentals (in Italian) | University of Helsinki with MinnaLearn, *Elements of AI*, Italian version promoted by the Dipartimento per la trasformazione digitale: [link](https://www.elementsofai.it/). *(alternative)* Federica Web Learning, *Intelligenza artificiale e scienza dei dati - le basi*: [AI catalogue](https://www.federica.eu/intelligenza-artificiale/) | University | **IT** | ~20 h (estimate) | None | Both are free (Federica states that all its courses are "100% gratuiti"). Federica requires registration to open the courses; duration not stated. |
+| Fundamentals of machine learning and deep learning | G. James, D. Witten, T. Hastie, R. Tibshirani, J. Taylor, *An Introduction to Statistical Learning with Applications in Python* (Springer, 2023) [29]: [link](https://www.statlearning.com/). *(alternative in Italian)* Federica Web Learning, *Machine Learning* (F. Stella): [AI catalogue](https://www.federica.eu/intelligenza-artificiale/). *(optional)* Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) | University (book, free PDF); the optional entry is **Industry** | EN (alternative IT) | ~20 h (estimate) | Levels 1–2 | Choose the chapters on regression, classification, model evaluation, trees and an introduction to neural networks. |
+| Generative AI and LLMs: how they work, limits, hallucinations, prompting | Politecnico di Milano, POK, *Data, Algorithms, and Ethical Challenges: Exploring the AI Revolution in Medicine* (free, 12 hours): [link](https://www.pok.polimi.it/course/view.php?id=177) [30]. Articles: Thirunavukarasu et al. 2023 (LLMs in medicine) [31]; Meskó 2023 (prompting for healthcare professionals) [32]; Ji et al. 2023 (hallucinations) [1]. *(optional)* Stanford, CS324 *Large Language Models* (lecture notes): [link](https://stanford-cs324.github.io/winter2022/) [33] | University, Peer-reviewed | EN | ~19 h (12 h stated by the POK course + 7 h of articles, estimate) | Level 2 | The CS324 notes do not cite hallucinations: the articles cover them. |
+| Machine learning for healthcare | MIT 6.S897 / HST.956, *Machine Learning for Healthcare* (Sontag, Szolovits, 2019). [Link](https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/) | University | EN | ~10 h (estimate) | Basic ML | Free notes and videos. Only a few lectures are followed (risk stratification, bias, interpretability); the full course assumes university-level ML. |
+| Clinical evaluation of models | TRIPOD+AI [34], CONSORT-AI [35], DECIDE-AI [36] (EQUATOR Network: [TRIPOD](https://www.equator-network.org/reporting-guidelines/tripod-statement/), [CONSORT-AI](https://www.equator-network.org/reporting-guidelines/consort-artificial-intelligence/), [DECIDE-AI](https://www.equator-network.org/reporting-guidelines/decide-ai/)); Van Calster et al. 2019, calibration [37] | Peer-reviewed, Scientific society (EQUATOR) | EN | ~8 h (estimate) | Level 2 | External validation, calibration, bias and checklists for reporting studies with AI. A checklist is applied to a real study. |
+| Ethics and regulation of AI in healthcare | WHO, *Ethics and governance of AI for health* (2021) [38]: [link](https://www.who.int/publications/i/item/9789240029200); WHO, guidance on *large multi-modal models* (2025) [39]: [link](https://www.who.int/publications/i/item/9789240084759); Regulation (EU) 2024/1689 (AI Act) [40]: [Commission page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) | Institution | EN/IT | ~10 h (estimate) | Level 4 | WHO documents as free PDFs (CC BY-NC-SA 3.0 IGO). For the AI Act and its relationship with the MDR use the official text in the EU Official Journal. |
 
 ---
 
 ## Track A · Clinician-Bridge
 
-**For whom:** leads digital health projects, evaluates and buys technology, governs AI in the hospital; writes little code. **Hours: ~118 (about 18.5 weeks) + project (~60 hours).**
+**For whom:** leads digital health projects, evaluates and buys technology, governs AI in the hospital; writes little code. **Hours: ~118.**
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Technology governance and assessment (HTA) | C. S. Goodman, *HTA 101* (NICHSR / National Library of Medicine, 2014) [41]: [archive](https://wayback.archive-it.org/org-350/https://www.nlm.nih.gov/nichsr/hta101/ta10101.html); O'Rourke et al. 2020, definition of HTA [42]; NICE, [Evidence standards framework](https://www.nice.org.uk/what-nice-does/digital-health/evidence-standards-framework-esf-for-digital-health-technologies) [43]. Verified 22 Nov 2026 | Institution, Peer-reviewed | EN | 4 wk | ~26 h (estimate) | Level 3 | The original NLM page is archived: the copy is used. Italian material (AGENAS) not found. |
-| Designing decision support systems and usability | Sutton 2020 [22]; Bates 2003 [44]; Zhang and Walji 2011 [23]; NIST NISTIR 7741 [24]; HL7 [CDS Hooks](https://cds-hooks.org/). Verified 22 Nov 2026 | Peer-reviewed, Institution | EN | 3 wk | ~20 h (estimate) | Level 3 | From reading to design: each student designs a decision flow using the criteria read. |
-| Project and change management | WHO, *Digital Implementation Investment Guide* [45]: [link](https://www.who.int/publications/i/item/9789240010567); MIT OpenCourseWare, HST.921, *Information Technology in the Health Care System of the Future* (2009): [link](https://ocw.mit.edu/courses/hst-921-information-technology-in-the-health-care-system-of-the-future-spring-2009/). Verified 22 Nov 2026 | Institution, University | EN | 7 wk | ~45 h (estimate) | Level 3 | The MIT material is from 2009: valid method, dated examples. |
-| Buying and evaluating AI products | NHS AI Lab, *A buyer's guide to AI in health and care* [46]: [link](https://www.gov.uk/data-ethics-guidance/a-buyers-guide-to-ai-in-health-and-care); NICE, Evidence standards framework (link above); Regulations [26] and [40]. Verified 22 Nov 2026 | Institution | EN | 2 wk | ~12 h (estimate) | Levels 4–5 | Ten questions for AI buyers. A British document: adapt it to the Italian context with the MDR and the AI Act. |
-| AI governance in the hospital | NIST, *AI Risk Management Framework 1.0* [47]: [link](https://www.nist.gov/itl/ai-risk-management-framework); WHO [38] [39]. Verified 22 Nov 2026 | Institution | EN | 2.5 wk | ~15 h (estimate) | Level 5 | AI risk management framework. Not specific to healthcare: complement it with the WHO documents. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Technology governance and assessment (HTA) | C. S. Goodman, *HTA 101* (NICHSR / National Library of Medicine, 2014) [41]: [archive](https://wayback.archive-it.org/org-350/https://www.nlm.nih.gov/nichsr/hta101/ta10101.html); O'Rourke et al. 2020, definition of HTA [42]; NICE, [Evidence standards framework](https://www.nice.org.uk/what-nice-does/digital-health/evidence-standards-framework-esf-for-digital-health-technologies) [43] | Institution, Peer-reviewed | EN | ~26 h (estimate) | Level 3 | The original NLM page is archived: the copy is used. Italian material (AGENAS) not found. |
+| Designing decision support systems and usability | Sutton 2020 [22]; Bates 2003 [44]; Zhang and Walji 2011 [23]; NIST NISTIR 7741 [24]; HL7 [CDS Hooks](https://cds-hooks.org/) | Peer-reviewed, Institution | EN | ~20 h (estimate) | Level 3 | From reading to design: each student designs a decision flow using the criteria read. |
+| Project and change management | WHO, *Digital Implementation Investment Guide* [45]: [link](https://www.who.int/publications/i/item/9789240010567); MIT OpenCourseWare, HST.921, *Information Technology in the Health Care System of the Future* (2009): [link](https://ocw.mit.edu/courses/hst-921-information-technology-in-the-health-care-system-of-the-future-spring-2009/) | Institution, University | EN | ~45 h (estimate) | Level 3 | The MIT material is from 2009: valid method, dated examples. |
+| Buying and evaluating AI products | NHS AI Lab, *A buyer's guide to AI in health and care* [46]: [link](https://www.gov.uk/data-ethics-guidance/a-buyers-guide-to-ai-in-health-and-care); NICE, Evidence standards framework (link above); Regulations [26] and [40] | Institution | EN | ~12 h (estimate) | Levels 4–5 | Ten questions for AI buyers. A British document: adapt it to the Italian context with the MDR and the AI Act. |
+| AI governance in the hospital | NIST, *AI Risk Management Framework 1.0* [47]: [link](https://www.nist.gov/itl/ai-risk-management-framework); WHO [38] [39] | Institution | EN | ~15 h (estimate) | Level 5 | AI risk management framework. Not specific to healthcare: complement it with the WHO documents. |
 
 ## Track B · Clinician-Developer
 
-**For whom:** programs, analyses data, builds models and applications. **Hours: ~399 (about 61.5 weeks) + project (~100 hours).** The heaviest entries moved out of the common core are here.
+**For whom:** programs, analyses data, builds models and applications. **Hours: ~429.** The heaviest entries moved out of the common core are here.
 
-| Course | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Complete Python and algorithms | Harvard University, [CS50P](https://cs50.harvard.edu/python/) (10 weeks plus a project, as stated by the source; here the completion beyond Python for Everybody); MIT OpenCourseWare, [6.006 Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (spring 2020). Verified 22 Nov 2026 | University | EN | 18.5 wk | ~120 h (estimate: CS50P ~50 h remaining + 6.006 ~70 h) | Level 1 | Demanding university courses. Alternative to 6.006: [CS50x](https://cs50.harvard.edu/x/) (11 weeks). |
-| Web development and FHIR apps (SMART on FHIR) | University of Helsinki, [Full Stack Open](https://fullstackopen.com/en/) (parts 0–5); HL7, [SMART App Launch](https://www.hl7.org/fhir/smart-app-launch/); SMART Health IT (Boston Children's Hospital), [docs](https://docs.smarthealthit.org/); Mandel et al. 2016 [48]. Verified 22 Nov 2026 | University, Standards body, Peer-reviewed | EN | 11.5 wk | ~75 h (estimate) | Levels 1 and 3 | Full Stack Open is free (CC BY-NC-SA). The SMART App Launcher can be used without registration. |
-| ML and deep learning in depth | Stanford University, [CS229 Machine Learning](https://cs229.stanford.edu/). *(optional)* fast.ai, [Practical Deep Learning](https://course.fast.ai/). Verified 22 Nov 2026 | University; the optional entry is **Industry** | EN | 10 wk | ~65 h (estimate; fast.ai states 9 lessons, ~13.5 h) | Levels 2 and 5 | fast.ai requires about a year of Python. |
-| Clinical NLP and LLMs | Stanford University, [CS224N NLP with Deep Learning](https://web.stanford.edu/class/cs224n/). Hugging Face, [LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) (free; each chapter ~6–8 hours per week as stated by the source). Systematic review of RAG (retrieval-augmented generation) in healthcare: Amugongo et al. 2025 [49], [PubMed 40498738](https://pubmed.ncbi.nlm.nih.gov/40498738/). Verified 22 Nov 2026 | University, Peer-reviewed; the HF course is **Industry** | EN | 13 wk | ~83 h (estimate, review included, ~3 h) | Level 5; good Python | The HF course covers transformers, fine-tuning and LLMs, not RAG or local inference: for RAG in medicine the systematic review [49] is read. |
-| Basic AI agents | Hugging Face, [AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) (free; frameworks smolagents, LlamaIndex, LangGraph; ~3–4 hours per week, as stated by the source). Verified 22 Nov 2026 | **Industry** | EN | 3 wk | ~21 h (estimate: ~3.5 hours per week stated by the source, for 6 weeks) | NLP/LLM and ML | Free. |
-| Medical imaging | 3D Slicer (NIH-funded; Fedorov et al. 2012) [50]: [training](https://training.slicer.org/); Stanford, [CS231n](https://cs231n.stanford.edu/). *(optional)* MONAI, [tutorials](https://github.com/Project-MONAI/tutorials). Verified 22 Nov 2026 | University, Peer-reviewed; MONAI is **Industry** | EN | 5.5 wk | ~35 h (estimate) | Level 3 (DICOM), 5 | MONAI is an open-source project with strong industry participation. |
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Complete Python and algorithms | Harvard University, [CS50P](https://cs50.harvard.edu/python/) (here the completion beyond Python for Everybody); MIT OpenCourseWare, [6.006 Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (spring 2020) | University | EN | ~120 h (estimate: CS50P ~50 h remaining + 6.006 ~70 h) | Level 1 | Demanding university courses. Alternative to 6.006: [CS50x](https://cs50.harvard.edu/x/). |
+| Web development and FHIR apps (SMART on FHIR) | University of Helsinki, [Full Stack Open](https://fullstackopen.com/en/) (parts 0–5); HL7, [SMART App Launch](https://www.hl7.org/fhir/smart-app-launch/); SMART Health IT (Boston Children's Hospital), [docs](https://docs.smarthealthit.org/); Mandel et al. 2016 [48] | University, Standards body, Peer-reviewed | EN | ~75 h (estimate) | Levels 1 and 3 | Full Stack Open is free (CC BY-NC-SA). The SMART App Launcher can be used without registration. |
+| ML and deep learning in depth | Stanford University, [CS229 Machine Learning](https://cs229.stanford.edu/). *(optional)* fast.ai, [Practical Deep Learning](https://course.fast.ai/) | University; the optional entry is **Industry** | EN | ~65 h (estimate; fast.ai states 9 lessons, ~13.5 h) | Levels 2 and 5 | fast.ai requires about a year of Python. |
+| Clinical NLP and LLMs | Stanford University, [CS224N NLP with Deep Learning](https://web.stanford.edu/class/cs224n/). Hugging Face, [LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) (free). Systematic review of RAG (retrieval-augmented generation) in healthcare: Amugongo et al. 2025 [49], [PubMed 40498738](https://pubmed.ncbi.nlm.nih.gov/40498738/) | University, Peer-reviewed; the HF course is **Industry** | EN | ~83 h (estimate, review included, ~3 h) | Level 5; good Python | The HF course covers transformers, fine-tuning and LLMs, not RAG or local inference: for RAG in medicine the systematic review [49] is read. |
+| Basic AI agents | Hugging Face, [AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) (free; frameworks smolagents, LlamaIndex, LangGraph) | **Industry** | EN | ~21 h (estimate) | NLP/LLM and ML | Free. |
+| MLOps: from models to products | C. Kästner (Carnegie Mellon University), *Machine Learning in Production: From Models to Products* (MIT Press, 2025) [50]: [online book](https://mlip-cmu.github.io/book/) | University | EN | ~30 h (estimate) | Levels 1 and 5 | Text freely readable online (CC BY-NC-ND 4.0 licence). Choose the chapters on architecture and deployment, pipeline automation, quality assurance and responsible engineering. |
+| Medical imaging | 3D Slicer (NIH-funded; Fedorov et al. 2012) [51]: [training](https://training.slicer.org/); Stanford, [CS231n](https://cs231n.stanford.edu/). *(optional)* MONAI, [tutorials](https://github.com/Project-MONAI/tutorials) | University, Peer-reviewed; MONAI is **Industry** | EN | ~35 h (estimate) | Level 3 (DICOM), 5 | MONAI is an open-source project with strong industry participation. |
 
 ---
 
 ## Electives (about 25 hours each)
 
-| Topic | Source | Source type | Language | Duration | Effort | Prerequisites | Notes |
-|---|---|---|---|---|---|---|---|
-| Genomics and bioinformatics | Galaxy Community [51]: [Galaxy Training Network](https://training.galaxyproject.org/). Verified 22 Nov 2026 | Peer-reviewed | EN | 4 wk | ~25 h (estimate) | Level 1 | Galaxy Training Network learning paths on biological data analysis. |
-| Digital public health and computational epidemiology | WHO, [OpenWHO](https://openwho.org/); ISS, [EpiCentro](https://www.epicentro.iss.it/) and [EDUISS](https://www.eduiss.it/) (free ISS distance learning, catalogues on public health and SABiC). Verified 22 Nov 2026 | Institution | EN/IT | 4 wk | ~25 h (estimate) | Level 2 | Choose the OpenWHO courses on epidemiology and data; EDUISS and EpiCentro for the Italian context (registration required). |
-| Telemedicine | Conferenza Stato-Regioni, *Indicazioni nazionali per l'erogazione di prestazioni in telemedicina*, Accordo del 17 dicembre 2020, Rep. Atti n. 215/CSR [52]: [atto](https://www.statoregioni.it/it/conferenza-stato-regioni/sedute-2020/seduta-del-17122020/atti/repertorio-atto-n-215csr/), [PDF](https://www.statoregioni.it/media/3221/p-3-csr-rep-n-215-17dic2020.pdf). Verified 22 Nov 2026 | Institution | IT | 4 wk | ~25 h (estimate) | Level 4 | The official text of the agreement was verified on the Conference's website (PDF reachable). |
-| Advanced imaging | See Track B (3D Slicer, CS231n, MONAI) and [PS3.1 DICOM](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/PS3.1.html) [18]. | University, Standards body | EN | 4 wk | ~25 h (estimate) | Level 3 | For those who choose Track A: concepts only, without code. |
+| Topic | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Genomics and bioinformatics | Galaxy Community [52]: [Galaxy Training Network](https://training.galaxyproject.org/) | Peer-reviewed | EN | ~25 h (estimate) | Level 1 | Galaxy Training Network learning paths on biological data analysis. |
+| Digital public health and computational epidemiology | WHO, [OpenWHO](https://openwho.org/); ISS, [EpiCentro](https://www.epicentro.iss.it/) and [EDUISS](https://www.eduiss.it/) (free ISS distance learning, catalogues on public health and SABiC) | Institution | EN/IT | ~25 h (estimate) | Level 2 | Choose the OpenWHO courses on epidemiology and data; EDUISS and EpiCentro for the Italian context (registration required). |
+| Telemedicine | Conferenza Stato-Regioni, *Indicazioni nazionali per l'erogazione di prestazioni in telemedicina*, Accordo del 17 dicembre 2020, Rep. Atti n. 215/CSR [53]: [atto](https://www.statoregioni.it/it/conferenza-stato-regioni/sedute-2020/seduta-del-17122020/atti/repertorio-atto-n-215csr/), [PDF](https://www.statoregioni.it/media/3221/p-3-csr-rep-n-215-17dic2020.pdf) | Institution | IT | ~25 h (estimate) | Level 4 | The official text of the agreement was verified on the Conference's website (PDF reachable). |
+| Advanced imaging | See Track B (3D Slicer, CS231n, MONAI) and [PS3.1 DICOM](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/PS3.1.html) [18]. | University, Standards body | EN | ~25 h (estimate) | Level 3 | For those who choose Track A: concepts only, without code. |
 
 ---
 
-## Final project (one per track)
+## Contributing
 
-The final project is presented, and a comment from the community is received, in the repository's [GitHub Discussions](https://github.com/dilfalmd/open-medical-informatics/discussions) (category "Progetti finali").
-
-**A · Specification and evaluation of an AI system for a ward.** The candidate writes a specification for an AI system (for example an emergency department triage software or a reporting support tool) with: the clinical need; MDR classification [26] [27]; risk classification under the AI Act [40]; risk analysis and data protection impact assessment (GDPR [2]); clinical evaluation criteria (TRIPOD+AI, DECIDE-AI [34] [36]); adoption and governance plan. Estimate: ~60 hours (about 9.5 weeks).
-
-**B · SMART on FHIR app or predictive model on MIMIC-IV.** Two routes to choose from. *App*: a SMART on FHIR app [48] that reads data from a test server and displays a clinically useful result, with tests. *Model*: a predictive model (for example mortality or readmission) on MIMIC-IV [11], with validation, calibration [37] and a report following TRIPOD+AI [34]. Access to MIMIC-IV is free but requires credentialing on PhysioNet: credentialed user, CITI training "Data or Specimens Only Research", signing of the data use agreement [53] ([PhysioNet guide](https://physionet.org/about/citi-course/), verified 22 Nov 2026). Estimate: ~100 hours (about 15.5 weeks).
-
----
-
-## Estimated total duration
-
-| Path | Estimated hours | Weeks at 6.5 h | At 8 h/wk | At 5 h/wk |
-|---|---|---|---|---|
-| Common core (levels 0–5) | ~327 | ~50 | ~40 | ~65 |
-| Track A (core + A ~118 h + project ~60 h) | ~505 | ~78 | ~62 | ~101 |
-| Track B (core + B ~399 h + project ~100 h) | ~826 | ~127 | ~102 | ~165 |
-| One elective | ~25 | ~4 | ~3 | ~5 |
-
-Durations are indicative estimates: rows, levels and totals use the same rule (6.5 hours/week, rounded to half a week); the 8 and 5 hours/week columns multiply by 0.8 and 1.3 and round to whole numbers. Optional entries (R for clinical research, Google ML Crash Course, fast.ai, MONAI, CS324) are excluded from the totals.
-
----
-
-## Contributing and review
-
-- **Propose or correct an entry:** issue or pull request in the repository, following the rules in [CONTRIBUTING.md](CONTRIBUTING.md).
-- **Links:** automatic check every month (GitHub Actions, lychee). **Content:** full review once a year.
-- **Final project:** GitHub Discussions, category "Progetti finali".
-- **Curator:** Diletta Falcone ([dilettafalcone.it](https://dilettafalcone.it)).
+Proposals and corrections by issue or pull request, following [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
@@ -261,10 +202,10 @@ Durations are indicative estimates: rows, levels and totals use the same rule (6
 47. National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. Gaithersburg (MD): NIST; 2023. doi:10.6028/NIST.AI.100-1. Available from: https://www.nist.gov/itl/ai-risk-management-framework
 48. Mandel JC, Kreda DA, Mandl KD, Kohane IS, Ramoni RB. SMART on FHIR: a standards-based, interoperable apps platform for electronic health records. J Am Med Inform Assoc. 2016;23(5):899-908. doi:10.1093/jamia/ocv189. PMID: 26911829.
 49. Amugongo LM, Mascheroni P, Brooks S, Doering S, Seidel J. Retrieval augmented generation for large language models in healthcare: a systematic review. PLOS Digit Health. 2025;4(6):e0000877. doi:10.1371/journal.pdig.0000877. PMID: 40498738.
-50. Fedorov A, Beichel R, Kalpathy-Cramer J, Finet J, Fillion-Robin JC, Pujol S, et al. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging. 2012;30(9):1323-41. doi:10.1016/j.mri.2012.05.001. PMID: 22770690.
-51. Galaxy Community. The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2022 update. Nucleic Acids Res. 2022;50(W1):W345-51. doi:10.1093/nar/gkac247. PMID: 35446428.
-52. Conferenza permanente per i rapporti tra lo Stato, le Regioni e le Province autonome di Trento e di Bolzano. Accordo ai sensi dell'art. 4, c. 1, D.Lgs. 281/1997 sul documento «Indicazioni nazionali per l'erogazione di prestazioni in telemedicina». Rep. Atti n. 215/CSR, seduta del 17 dicembre 2020. Available from: https://www.statoregioni.it/it/conferenza-stato-regioni/sedute-2020/seduta-del-17122020/atti/repertorio-atto-n-215csr/
-53. PhysioNet. MIMIC-IV, version 3.1 (2024): dataset page, access requirements (credentialed user, CITI training, data use agreement). Available from: https://physionet.org/content/mimiciv/3.1/
+50. Kästner C. Machine learning in production: from models to products. Cambridge (MA): MIT Press; 2025. Available from: https://mlip-cmu.github.io/book/
+51. Fedorov A, Beichel R, Kalpathy-Cramer J, Finet J, Fillion-Robin JC, Pujol S, et al. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging. 2012;30(9):1323-41. doi:10.1016/j.mri.2012.05.001. PMID: 22770690.
+52. Galaxy Community. The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2022 update. Nucleic Acids Res. 2022;50(W1):W345-51. doi:10.1093/nar/gkac247. PMID: 35446428.
+53. Conferenza permanente per i rapporti tra lo Stato, le Regioni e le Province autonome di Trento e di Bolzano. Accordo ai sensi dell'art. 4, c. 1, D.Lgs. 281/1997 sul documento «Indicazioni nazionali per l'erogazione di prestazioni in telemedicina». Rep. Atti n. 215/CSR, seduta del 17 dicembre 2020. Available from: https://www.statoregioni.it/it/conferenza-stato-regioni/sedute-2020/seduta-del-17122020/atti/repertorio-atto-n-215csr/
 
 ---
 

@@ -53,7 +53,7 @@ LANGS = {
         "og_alt_locale": "en_US",
         "path": PATH_IT,
         "title": "Open Medical Informatics - Diletta Falcone",
-        "description": "Curriculum gratuito, sul modello di OSSU Computer Science, per medici che vogliono diventare medici informatici: sei livelli, due indirizzi, fonti citate e caselle di avanzamento.",
+        "description": "Curriculum gratuito di informatica medica per medici, sul modello di OSSU Computer Science.",
         "og_image_alt": "Diletta Falcone, medico chirurgo",
         "nav": [("Percorso", "/percorso/"), ("Progetti", "/progetti/"), ("Contatti", "#contatti")],
         "switch": ("English", PATH_EN, "en"),
@@ -92,7 +92,7 @@ LANGS = {
         "og_alt_locale": "it_IT",
         "path": PATH_EN,
         "title": "Open Medical Informatics - Diletta Falcone",
-        "description": "A free curriculum, modelled on OSSU Computer Science, for physicians who want to become clinical informaticians: six levels, two tracks, cited sources and progress checkboxes.",
+        "description": "A free medical informatics curriculum for physicians, modelled on OSSU Computer Science.",
         "og_image_alt": "Diletta Falcone, physician",
         "nav": [("Background", "/percorso/"), ("Projects", "/progetti/"), ("Contact", "#contatti")],
         "switch": ("Italiano", PATH_IT, "it"),
@@ -131,13 +131,11 @@ SECTION_PATTERNS = [
     ("level", re.compile(r"^(?:Livello|Level)\s+(\d)\b")),
     ("track", re.compile(r"^(?:Indirizzo|Track)\s+([AB])\b")),
     ("electives", re.compile(r"^(?:Approfondimenti|Electives)\b")),
-    ("projects", re.compile(r"^(?:Progetto finale|Final project)\b")),
     ("references", re.compile(r"^(?:Bibliografia|References)\b")),
 ]
-COURSE_COLS = 8
+COURSE_COLS = 7
 OPTIONAL_RE = re.compile(r"^\*\((?:facoltativo|optional)\b")
-PROJECT_RE = re.compile(r"^\*\*([AB]) · (.+?)\*\*\s*(.*)$", re.S)
-REVISION_RE = re.compile(r"^(?:Ultima revisione|Last revised):", re.I)
+REVISION_RE = re.compile(r"^(?:Revisione|Revised):", re.I)
 
 
 class Errori(Exception):
@@ -230,11 +228,10 @@ def slugify(text, max_len=44):
 class Section:
     def __init__(self, title, kind, key):
         self.title = title
-        self.kind = kind  # level, track, electives, projects, references, generic
+        self.kind = kind  # level, track, electives, references, generic
         self.key = key  # l0..l5, a, b, ap, ...
         self.blocks = []
         self.courses = []  # per le sezioni con tabella dei corsi
-        self.projects = []
         self.refs = []
 
 
@@ -286,7 +283,7 @@ def parse_doc(path):
 
 
 def extract(doc):
-    """Estrae corsi, progetti e bibliografia dalle sezioni."""
+    """Estrae corsi e bibliografia dalle sezioni."""
     for s in doc.sections:
         if s.kind in ("level", "track", "electives"):
             tables = [b for b in s.blocks if b[0] == "table" and len(b[1][0]) == COURSE_COLS]
@@ -299,12 +296,6 @@ def extract(doc):
                 if len(r) != COURSE_COLS:
                     raise Errori("%s: riga con %d celle in «%s»: %s" % (doc.path.name, len(r), s.title, r[0][:40]))
                 s.courses.append({"cells": r, "optional": bool(OPTIONAL_RE.match(r[0]))})
-        elif s.kind == "projects":
-            for b in s.blocks:
-                if b[0] == "p":
-                    m = PROJECT_RE.match(b[1])
-                    if m:
-                        s.projects.append({"letter": m.group(1), "title": m.group(2).rstrip(". "), "text": m.group(3)})
         elif s.kind == "references":
             for b in s.blocks:
                 if b[0] == "ol":
@@ -338,16 +329,6 @@ def assign_ids(it, en):
                 ids[("en", s.key, i)] = cid
                 if c["optional"] != e.courses[i]["optional"]:
                     problems.append("corso %d di «%s»: facoltativo in una lingua sola" % (i + 1, s.title))
-        elif s.kind == "projects":
-            e = sec_en.get("projects")
-            li = [p["letter"] for p in s.projects]
-            le = [p["letter"] for p in e.projects] if e else []
-            if li != le:
-                problems.append("progetti finali diversi: %s / %s" % (li, le))
-            for i, p in enumerate(s.projects):
-                pid = "progetto-" + p["letter"].lower()
-                ids[("it", "projects", i)] = pid
-                ids[("en", "projects", i)] = pid
     return ids, problems
 
 
@@ -484,8 +465,6 @@ def count_group(doc, keys):
     for s in doc.sections:
         if s.kind in ("level", "track", "electives") and s.key in keys:
             n += sum(1 for c in s.courses if not c["optional"])
-        if s.kind == "projects":
-            n += sum(1 for p in s.projects if p["letter"].lower() in keys)
     return n
 
 
@@ -552,21 +531,16 @@ def render_page(lang, doc, ids, errors):
     add('  <main class="omi">')
 
     # -- testata ------------------------------------------------------------
-    intro = list(doc.intro)
-    lead = None
-    meta_list = None
-    rest = []
-    for b in intro:
-        if lead is None and b[0] == "p":
-            lead = re.sub(r"^\*\*(.+)\*\*$", r"\1", b[1])
-        elif meta_list is None and b[0] == "ul":
-            meta_list = b[1]
-        else:
-            rest.append(b)
-    if lead is None or meta_list is None:
-        raise Errori("%s: dopo il titolo servono un paragrafo e un elenco (revisione, curatrice)" % doc.path.name)
+    # dopo il titolo: sottotitolo (in grassetto), paragrafo introduttivo,
+    # riga di servizio (curatrice, revisione, link) con voci separate da " · "
+    paras = [b[1] for b in doc.intro if b[0] == "p"]
+    if len(paras) < 3:
+        raise Errori("%s: dopo il titolo servono sottotitolo, introduzione e riga della curatrice" % doc.path.name)
+    lead = re.sub(r"^\*\*(.+)\*\*$", r"\1", paras[0])
+    meta_list = [x.strip() for x in paras[-1].split(" · ")]
+    rest = [("p", x) for x in paras[1:-1]]
     if not any(REVISION_RE.match(plain(x)) for x in meta_list):
-        raise Errori("%s: manca la riga «Ultima revisione»/«Last revised»" % doc.path.name)
+        raise Errori("%s: manca la voce «Revisione»/«Revised» nella riga della curatrice" % doc.path.name)
     add('    <section class="wrap page-head">')
     add('      <p class="eyebrow">%s</p>' % esc(L["eyebrow"]))
     add("      <h1>%s</h1>" % inline(doc.title))
@@ -636,21 +610,6 @@ def render_page(lang, doc, ids, errors):
             for i, c in enumerate(s.courses):
                 add(render_course(c, ids[(lang, s.key, i)], s.key, s.headers))
             add("      </div>")
-            if s.kind == "track":
-                # i progetti finali di questo indirizzo compaiono nella sezione «Progetto finale»
-                pass
-        elif s.kind == "projects":
-            body = []
-            n = 0
-            for b in s.blocks:
-                m = PROJECT_RE.match(b[1]) if b[0] == "p" else None
-                if m:
-                    p = s.projects[n]
-                    body.append(render_project(p, ids[(lang, "projects", n)]))
-                    n += 1
-                else:
-                    render_blocks([b], body)
-            add('      <div class="prose">' + "".join(body) + "</div>")
         elif s.kind == "references":
             body = []
             for b in s.blocks:
@@ -702,23 +661,13 @@ def render_course(c, cid, key, headers):
         '<label for="chk-%s">%s</label></div>' % (cid, cid, key, opt, cid, inline(cells[0]))
     )
     out.append('        <dl class="meta">')
-    wide = {1, 2, 7}  # Fonte, Tipo di fonte, Note
+    wide = {1, 2, 6}  # Fonte, Tipo di fonte, Note
     for idx in range(1, COURSE_COLS):
         cls = "m m-wide" if idx in wide else "m"
         out.append('          <div class="%s"><dt>%s</dt><dd>%s</dd></div>' % (cls, esc(plain(headers[idx])), inline(cells[idx])))
     out.append("        </dl>")
     out.append("      </article>")
     return "\n".join(out)
-
-
-def render_project(p, pid):
-    letter = p["letter"]
-    return (
-        '<article class="corso progetto" id="c-%s">'
-        '<div class="corso-head"><input type="checkbox" class="chk" id="chk-%s" data-id="%s" data-group="%s">'
-        '<label for="chk-%s">%s · %s</label></div>'
-        '<p class="progetto-testo">%s</p></article>'
-    ) % (pid, pid, pid, letter.lower(), pid, esc(letter), inline(p["title"]), inline(p["text"]))
 
 
 def file_hash(path):
