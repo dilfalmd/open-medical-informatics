@@ -6,7 +6,7 @@
 
 Modelled on [OSSU Computer Science](https://github.com/ossu/computer-science), for those starting from zero in computing: a common core (levels 0–5), then a track of your choice, *Clinician-Bridge* (leads projects, writes little code) or *Clinician-Developer* (programs and analyses data).
 
-Curator: [Diletta Falcone](https://dilettafalcone.it) · Revised: 22 Nov 2026, fully reviewed every year · Links verified on 22 Nov 2026 and checked every month · Training guide: it does not replace accredited training or the advice of experts.
+Curator: [Diletta Falcone](https://dilettafalcone.it) · Revised: 22 Nov 2026
 
 ## Principles
 

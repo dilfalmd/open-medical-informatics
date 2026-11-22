@@ -6,7 +6,7 @@
 
 Sul modello di [OSSU Computer Science](https://github.com/ossu/computer-science), per chi parte da zero in informatica: un tronco comune (livelli 0–5), poi un indirizzo a scelta, *Clinico-ponte* (guida i progetti, scrive poco codice) o *Clinico-sviluppatore* (programma e analizza).
 
-Curatrice: [Diletta Falcone](https://dilettafalcone.it) · Revisione: 22/11/2026, completa ogni anno · Link verificati il 22/11/2026 e controllati ogni mese · Guida formativa: non sostituisce la formazione accreditata né il parere di esperti.
+Curatrice: [Diletta Falcone](https://dilettafalcone.it) · Revisione: 22/11/2026
 
 ## Principi
 
