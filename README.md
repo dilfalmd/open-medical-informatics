@@ -178,7 +178,7 @@ The full rules for proposing an entry are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Final project (one per track)
 
-The final project is presented, and a comment from the community is received, in the repository's [GitHub Discussions](https://github.com/dilfal/open-medical-informatics/discussions) (category "Progetti finali").
+The final project is presented, and a comment from the community is received, in the repository's [GitHub Discussions](https://github.com/dilfalmd/open-medical-informatics/discussions) (category "Progetti finali").
 
 **A · Specification and evaluation of an AI system for a ward.** The candidate writes a specification for an AI system (for example an emergency department triage software or a reporting support tool) with: the clinical need; MDR classification [26] [27]; risk classification under the AI Act [40]; risk analysis and data protection impact assessment (GDPR [2]); clinical evaluation criteria (TRIPOD+AI, DECIDE-AI [34] [36]); adoption and governance plan. Estimate: ~60 hours (about 9.5 weeks).
 

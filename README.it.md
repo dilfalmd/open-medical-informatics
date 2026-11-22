@@ -178,7 +178,7 @@ Le regole complete per proporre una voce sono in [CONTRIBUTING.md](CONTRIBUTING.
 
 ## Progetto finale (uno per indirizzo)
 
-Il progetto finale si presenta, e si riceve un commento dalla comunità, nelle [GitHub Discussions](https://github.com/dilfal/open-medical-informatics/discussions) del repository (categoria «Progetti finali»).
+Il progetto finale si presenta, e si riceve un commento dalla comunità, nelle [GitHub Discussions](https://github.com/dilfalmd/open-medical-informatics/discussions) del repository (categoria «Progetti finali»).
 
 **A · Capitolato e valutazione di un sistema AI per un reparto.** Il candidato scrive un capitolato per un sistema AI (per esempio un software di triage in pronto soccorso o di supporto alla refertazione) con: bisogno clinico; classificazione MDR [26] [27]; classificazione di rischio secondo l'AI Act [40]; analisi dei rischi e valutazione d'impatto sulla protezione dei dati (GDPR [2]); criteri di valutazione clinica (TRIPOD+AI, DECIDE-AI [34] [36]); piano di adozione e di governance. Stima: ~60 ore (circa 9,5 settimane).
 

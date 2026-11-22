@@ -39,7 +39,7 @@ DEFAULT_SITE = ROOT.parent / "siti-web" / "dilettafalcone.it"
 MODELLO = ROOT / "tools" / "modello"
 
 SITE_URL = "https://dilettafalcone.it"
-REPO_URL = "https://github.com/dilfal/open-medical-informatics"
+REPO_URL = "https://github.com/dilfalmd/open-medical-informatics"
 STYLE_VERSION = "2"  # ?v=N di /css/style.css, come nelle altre pagine del sito
 STORAGE_KEY = "omi-progress-v1"
 PATH_IT = "/open-medical-informatics/"
