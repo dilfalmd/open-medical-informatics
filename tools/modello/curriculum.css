@@ -1,0 +1,206 @@
+/* Open Medical Informatics: stile delle pagine del curriculum.
+   Usa le variabili di /css/style.css (tema chiaro e scuro automatico).
+   Sorgente: tools/modello/curriculum.css nel repository open-medical-informatics. */
+
+.omi { padding-bottom: 24px; }
+
+.omi .page-head { padding-top: 72px; padding-bottom: 24px; }
+.omi .page-head .lead {
+  max-width: 720px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.omi .section { padding-bottom: 56px; }
+.omi .section h2 { margin-bottom: 20px; }
+.omi .section .kicker { margin-bottom: 4px; }
+
+.meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin-top: 22px !important;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.repo-line { margin-top: 14px !important; font-family: var(--mono); font-size: 13px; }
+
+/* Testo corrente */
+.omi .prose p { margin: 0 0 14px; max-width: 78ch; }
+.omi .prose ul { margin: 0 0 14px; padding-left: 1.3em; list-style: disc; max-width: 78ch; }
+.omi .prose ol { margin: 0 0 14px; padding-left: 1.6em; list-style: decimal; max-width: 78ch; }
+.omi .prose li { margin-bottom: 6px; }
+.omi .intro { padding-bottom: 8px; }
+main.omi a:not(.btn):not(.nav-logo) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.omi a.cit { text-decoration: none; font-family: var(--mono); font-size: 0.85em; white-space: nowrap; }
+.omi a.cit:hover { text-decoration: underline; }
+.omi code { font-family: var(--mono); font-size: 0.92em; }
+
+/* Barra di avanzamento */
+.bars { display: grid; gap: 14px; }
+.bar { min-width: 0; }
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.bar-name { color: var(--fg); min-width: 0; overflow-wrap: anywhere; }
+.bar-num { color: var(--muted); white-space: nowrap; }
+.bar-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+.bar-section { margin-bottom: 18px; max-width: 520px; }
+
+/* Pannello avanzamento */
+.tracker-wrap { padding-bottom: 28px; }
+.tracker {
+  padding: 24px;
+  border: 1px solid var(--card-line);
+  border-radius: 10px;
+  background: var(--card-bg);
+}
+.tracker h2 { margin-bottom: 18px; font-family: var(--head); font-weight: 600; font-size: 24px; letter-spacing: -0.01em; }
+.tracker .tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.tracker-note { margin-top: 14px !important; font-size: 14px; color: var(--muted); max-width: 78ch; }
+.tracker-status { min-height: 1.4em; margin-top: 8px !important; font-family: var(--mono); font-size: 13px; color: var(--accent); }
+button.btn { background: transparent; cursor: pointer; line-height: 1.4; }
+button.btn.btn-primary { background: var(--btn-bg); }
+button.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Indice */
+.toc-wrap { padding-bottom: 36px; }
+nav.toc { border-bottom: 0; }
+.toc ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc a {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid var(--card-line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--fg);
+}
+.toc a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Corsi: una scheda per corso, con casella */
+.corsi { margin-top: 8px; }
+.corso {
+  margin-bottom: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--card-line);
+  border-radius: 10px;
+  background: var(--card-bg);
+  scroll-margin-top: 16px;
+}
+.corso.fatto { border-color: var(--accent); }
+.corso.facoltativo { border-style: dashed; }
+.corso-head { display: flex; gap: 12px; align-items: flex-start; }
+.chk {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: 3px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.corso-head label {
+  min-width: 0;
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.corso.fatto .corso-head label { color: var(--muted); }
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin: 14px 0 0;
+}
+.meta .m { min-width: 0; margin: 0; }
+.meta .m-wide { grid-column: 1 / -1; }
+.meta dt {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.meta dd { margin: 2px 0 0; font-size: 15px; line-height: 1.55; overflow-wrap: anywhere; }
+.progetto-testo { margin: 12px 0 0 !important; font-size: 15px; }
+
+@media (min-width: 720px) {
+  .meta { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-left: 34px; }
+  .progetto-testo { margin-left: 34px !important; }
+}
+
+/* Tabelle generiche (durata complessiva): su telefono diventano schede */
+.tabella { margin: 0 0 18px; }
+.tabella table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.tabella th, .tabella td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.tabella th { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+@media (max-width: 640px) {
+  .tabella table, .tabella tbody, .tabella tr, .tabella td { display: block; width: 100%; }
+  .tabella thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tabella tr {
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    border: 1px solid var(--card-line);
+    border-radius: 10px;
+    background: var(--card-bg);
+  }
+  .tabella td { display: flex; gap: 12px; justify-content: space-between; padding: 5px 0; border: 0; }
+  .tabella td::before {
+    content: attr(data-label);
+    flex: 0 0 42%;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .tabella td:first-child { display: block; font-weight: 600; }
+  .tabella td:first-child::before { display: none; }
+}
+
+/* Bibliografia */
+.refs { padding-left: 2.4em !important; font-size: 15px; }
+.refs li { padding-left: 4px; overflow-wrap: anywhere; scroll-margin-top: 16px; }
+.refs li:target { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+
+@media (max-width: 520px) {
+  .omi .page-head { padding-top: 40px; }
+  .omi .page-head .lead { font-size: 18px; }
+  .omi .section { padding-bottom: 44px; }
+  .tracker { padding: 18px; }
+  .corso { padding: 16px; }
+  .corso-head label { font-size: 17px; }
+  .tracker .tools .btn { flex: 1 1 100%; text-align: center; }
+  .bar-label { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar-fill { transition: none; }
+}
