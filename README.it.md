@@ -17,7 +17,7 @@ Curatrice: [Diletta Falcone](https://dilettafalcone.it) · Revisione: 22/11/2026
 
 ## Come usare questa guida
 
-I livelli 0–5 si fanno in ordine, poi si sceglie un indirizzo (A o B). Le ore sono stime della curatrice quando la fonte non le dichiara («stima» nella colonna Impegno); i numeri tra parentesi quadre rinviano alla Bibliografia.
+I livelli 0–5 si fanno in ordine, poi si sceglie un indirizzo (A o B). I numeri tra parentesi quadre rinviano alla Bibliografia.
 
 ---
 

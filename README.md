@@ -17,7 +17,7 @@ Curator: [Diletta Falcone](https://dilettafalcone.it) · Revised: 22 Nov 2026
 
 ## How to use this guide
 
-Levels 0–5 are taken in order, then you choose a track (A or B). Hours are the curator's estimates when the source does not state them ("estimate" in the Effort column); numbers in square brackets point to the References.
+Levels 0–5 are taken in order, then you choose a track (A or B). Numbers in square brackets point to the References.
 
 ---
 
