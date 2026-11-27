@@ -2,7 +2,7 @@
 
 [Italiano](#contribuire)
 
-Thank you for helping to keep **Open Medical Informatics** accurate and up to date. Every proposal is reviewed before it is merged. The curriculum itself is in [README.it.md](README.it.md) (Italian) and [README.md](README.md) (English): the two files must always contain the same courses in the same order.
+Thank you for helping to keep **Open Health Informatics** accurate and up to date. Every proposal is reviewed before it is merged. The curriculum itself is in [README.it.md](README.it.md) (Italian) and [README.md](README.md) (English): the two files must always contain the same courses in the same order.
 
 ## Source criteria
 
@@ -50,7 +50,7 @@ After a change to the READMEs, the pages of the website are regenerated with `py
 
 [English](#contributing)
 
-Grazie per l'aiuto nel mantenere **Open Medical Informatics** corretto e aggiornato. Ogni proposta viene rivista prima di essere accolta. Il curriculum sta in [README.it.md](README.it.md) (italiano) e [README.md](README.md) (inglese): i due file devono contenere sempre gli stessi corsi, nello stesso ordine.
+Grazie per l'aiuto nel mantenere **Open Health Informatics** corretto e aggiornato. Ogni proposta viene rivista prima di essere accolta. Il curriculum sta in [README.it.md](README.it.md) (italiano) e [README.md](README.md) (inglese): i due file devono contenere sempre gli stessi corsi, nello stesso ordine.
 
 ## Criteri per le fonti
 

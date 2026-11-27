@@ -1,10 +1,12 @@
-[Versione italiana](README.it.md) · [Web page with progress checkboxes](https://dilettafalcone.it/en/open-medical-informatics/)
+[Versione italiana](README.it.md) · [Web page with progress checkboxes](https://dilettafalcone.it/en/open-health-informatics/)
 
-# Open Medical Informatics
+# Open Health Informatics
 
-**A free medical informatics curriculum for physicians.**
+**A free health informatics curriculum for physicians and health professionals.**
 
-Modelled on [OSSU Computer Science](https://github.com/ossu/computer-science), for those starting from zero in computing: a common core (levels 0–5), then a track of your choice, *Clinician-Bridge* (leads projects, writes little code) or *Clinician-Developer* (programs and analyses data).
+Modelled on [OSSU Computer Science](https://github.com/ossu/computer-science), for those starting from zero in computing: a common core (levels 0–5), then a track of your choice, *Bridge* (leads projects, writes little code), *Developer* (programs and analyses data) or *Translational Bioinformatics* (genomics applied to the clinic).
+
+**Who it is for.** Physicians and health professionals (nurses, midwives, health technicians, pharmacists, rehabilitation professions), who can follow it as it stands. Biologists and laboratory staff find their path in track C. Health statisticians and epidemiologists start from the other side: they can skip Level 2 and will find track B a natural fit, but the guide assumes a basic knowledge of clinical work.
 
 Revised: 22 Nov 2026
 
@@ -17,7 +19,7 @@ Revised: 22 Nov 2026
 
 ## How to use this guide
 
-Levels 0–5 are taken in order, then you choose a track (A or B). Numbers in square brackets point to the References.
+Levels 0–5 are taken in order, then you choose a track (A, B or C). Numbers in square brackets point to the References.
 
 ---
 
@@ -104,7 +106,7 @@ Levels 0–5 are taken in order, then you choose a track (A or B). Numbers in sq
 
 ---
 
-## Track A · Clinician-Bridge
+## Track A · Bridge
 
 **For whom:** leads digital health projects, evaluates and buys technology, governs AI in the hospital; writes little code. **Hours: ~118.**
 
@@ -116,7 +118,7 @@ Levels 0–5 are taken in order, then you choose a track (A or B). Numbers in sq
 | Buying and evaluating AI products | NHS AI Lab, *A buyer's guide to AI in health and care* [46]: [link](https://www.gov.uk/data-ethics-guidance/a-buyers-guide-to-ai-in-health-and-care); NICE, Evidence standards framework (link above); Regulations [26] and [40] | Institution | EN | ~12 h (estimate) | Levels 4–5 | Ten questions for AI buyers. A British document: adapt it to the Italian context with the MDR and the AI Act. |
 | AI governance in the hospital | NIST, *AI Risk Management Framework 1.0* [47]: [link](https://www.nist.gov/itl/ai-risk-management-framework); WHO [38] [39] | Institution | EN | ~15 h (estimate) | Level 5 | AI risk management framework. Not specific to healthcare: complement it with the WHO documents. |
 
-## Track B · Clinician-Developer
+## Track B · Developer
 
 **For whom:** programs, analyses data, builds models and applications. **Hours: ~524.** The heaviest entries moved out of the common core are here.
 
@@ -131,13 +133,28 @@ Levels 0–5 are taken in order, then you choose a track (A or B). Numbers in sq
 | Basic AI agents | Hugging Face, [AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) (free; frameworks smolagents, LlamaIndex, LangGraph) | **Industry** | EN | ~21 h (estimate) | NLP/LLM and ML | Free. |
 | MLOps: from models to products | C. Kästner (Carnegie Mellon University), *Machine Learning in Production: From Models to Products* (MIT Press, 2025) [51]: [online book](https://mlip-cmu.github.io/book/) | University | EN | ~30 h (estimate) | Levels 1 and 5 | Text freely readable online (CC BY-NC-ND 4.0 licence). Choose the chapters on architecture and deployment, pipeline automation, quality assurance and responsible engineering. |
 
+## Track C · Translational bioinformatics
+
+**For whom:** comes from biology or the laboratory and wants to work with genomic data in the clinic (analysis, interpretation and exchange of patients' genetic data). **Hours: ~125.** Pure bioinformatics (phylogenetics, structural biology, sequence algorithms) is left out.
+
+| Course | Source | Source type | Language | Effort | Prerequisites | Notes |
+|---|---|---|---|---|---|---|
+| Foundations of computational genomics | MIT OpenCourseWare, 7.91J, *Foundations of Computational and Systems Biology* (spring 2014) [54]: [link](https://ocw.mit.edu/courses/7-91j-foundations-of-computational-and-systems-biology-spring-2014/) | University | EN | ~25 h (estimate) | Levels 1 and 2 | Free notes, videos and assignments (CC BY-NC-SA 4.0). A one-semester course: choose the lectures on genomic sequence analysis and gene expression; leave out phylogenetics and structural biology. |
+| NGS data analysis and the VCF format | Galaxy Training Network, *Sequence analysis* and *Variant analysis* paths [52]: [link](https://training.galaxyproject.org/training-material/topics/variant-analysis/); EMBL-EBI Training, on-demand courses [56]: [link](https://www.ebi.ac.uk/training/on-demand); Danecek et al. 2011, VCF format [55] | Peer-reviewed, Institution | EN | ~30 h (estimate) | Level 1 | Galaxy: free open material, exercises on a public Galaxy server. EMBL-EBI: free on-demand courses, account optional (only needed to track progress). Choose alignment, variant calling and annotation; Biopython or Python to read VCF files. |
+| Clinical interpretation of variants | Richards et al. 2015, ACMG/AMP guidelines [57]; ClinGen [58]: [site](https://clinicalgenome.org/); ClinVar (NCBI) [59]: [site](https://www.ncbi.nlm.nih.gov/clinvar/) | Scientific society, Peer-reviewed, Institution | EN | ~20 h (estimate) | Level 3 | ClinGen data (CC0) and ClinVar are freely searchable. Classify an example variant with the ACMG/AMP criteria and compare it with ClinVar. |
+| Genomic data standards | GA4GH [60]: [products](https://www.ga4gh.org/) (VCF and htsget, [Phenopackets](https://www.ga4gh.org/product/phenopackets/) [61], [Beacon](https://www.ga4gh.org/product/beacon/)); HL7, [Genomics Reporting IG](https://build.fhir.org/ig/HL7/genomics-reporting/) [62] | Standards body, Peer-reviewed | EN | ~25 h (estimate) | Levels 1, 2 and 3 | GA4GH products are stated to be free and open source. Follow the HL7 guide to report a variant in FHIR; data are always example data. |
+| Pharmacogenomics | CPIC [63]: [guidelines](https://www.clinpgx.org/cpic/guidelines); ClinPGx (formerly PharmGKB) [64]: [site](https://www.clinpgx.org/) | Scientific society, Institution | EN | ~15 h (estimate) | Level 3 | CPIC guidelines are freely accessible; ClinPGx data under CC BY-SA 4.0, no registration. Read 2–3 guidelines (gene and drug). |
+| Genetic data: rules and privacy | GDPR, Art. 9 [2]; Italian Data Protection Authority (Garante), Provvedimento no. 146 of 5 June 2019, section 4 on genetic data [65]: [link](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9124510) | Institution | IT | ~10 h (estimate) | Level 4 | The measure remains in force (amended on 13 February 2025, no. 66) until the guarantee measures under Art. 2-septies of the Privacy Code are adopted. |
+
+Pure bioinformatics (phylogenetics, structural biology, sequence algorithms) is outside the scope of this curriculum.
+
 ---
 
 ## Electives (about 25 hours each)
 
 | Topic | Source | Source type | Language | Effort | Prerequisites | Notes |
 |---|---|---|---|---|---|---|
-| Genomics and bioinformatics | Galaxy Community [52]: [Galaxy Training Network](https://training.galaxyproject.org/) | Peer-reviewed | EN | ~25 h (estimate) | Level 1 | Galaxy Training Network learning paths on biological data analysis. |
+| Genomics and bioinformatics | Galaxy Community [52]: [Galaxy Training Network](https://training.galaxyproject.org/) | Peer-reviewed | EN | ~25 h (estimate) | Level 1 | Galaxy Training Network learning paths on biological data analysis. Those following Track C already find it in their path. |
 | Digital public health and computational epidemiology | WHO, [OpenWHO](https://openwho.org/); ISS, [EpiCentro](https://www.epicentro.iss.it/) and [EDUISS](https://www.eduiss.it/) (free ISS distance learning, catalogues on public health and SABiC) | Institution | EN/IT | ~25 h (estimate) | Level 2 | Choose the OpenWHO courses on epidemiology and data; EDUISS and EpiCentro for the Italian context (registration required). |
 | Advanced imaging | See Track B (3D Slicer, CS231n, MONAI) and [PS3.1 DICOM](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/PS3.1.html) [18]. | University, Standards body | EN | ~25 h (estimate) | Level 3 | For those who choose Track A: concepts only, without code. |
 | Telemedicine | Conferenza Stato-Regioni, *Indicazioni nazionali per l'erogazione di prestazioni in telemedicina*, Accordo del 17 dicembre 2020, Rep. Atti n. 215/CSR [53]: [atto](https://www.statoregioni.it/it/conferenza-stato-regioni/sedute-2020/seduta-del-17122020/atti/repertorio-atto-n-215csr/), [PDF](https://www.statoregioni.it/media/3221/p-3-csr-rep-n-215-17dic2020.pdf) | Institution | IT | ~25 h (estimate) | Level 4 | The official text of the agreement was verified on the Conference's website (PDF reachable). |
@@ -207,6 +224,18 @@ Proposals and corrections by issue or pull request, following [CONTRIBUTING.md](
 51. Kästner C. Machine learning in production: from models to products. Cambridge (MA): MIT Press; 2025. Available from: https://mlip-cmu.github.io/book/
 52. Galaxy Community. The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2022 update. Nucleic Acids Res. 2022;50(W1):W345-51. doi:10.1093/nar/gkac247. PMID: 35446428.
 53. Conferenza permanente per i rapporti tra lo Stato, le Regioni e le Province autonome di Trento e di Bolzano. Accordo ai sensi dell'art. 4, c. 1, D.Lgs. 281/1997 sul documento «Indicazioni nazionali per l'erogazione di prestazioni in telemedicina». Rep. Atti n. 215/CSR, seduta del 17 dicembre 2020. Available from: https://www.statoregioni.it/it/conferenza-stato-regioni/sedute-2020/seduta-del-17122020/atti/repertorio-atto-n-215csr/
+54. MIT OpenCourseWare. 7.91J Foundations of Computational and Systems Biology [course]. Cambridge (MA): Massachusetts Institute of Technology; spring 2014. Available from: https://ocw.mit.edu/courses/7-91j-foundations-of-computational-and-systems-biology-spring-2014/
+55. Danecek P, Auton A, Abecasis G, Albers CA, Banks E, DePristo MA, et al. The variant call format and VCFtools. Bioinformatics. 2011;27(15):2156-8. doi:10.1093/bioinformatics/btr330. PMID: 21653522.
+56. EMBL-EBI Training. On-demand training [online courses]. Hinxton: European Bioinformatics Institute (EMBL-EBI). Available from: https://www.ebi.ac.uk/training/on-demand. Free access stated at: https://www.embl.org/training/self-paced-learning/
+57. Richards S, Aziz N, Bale S, Bick D, Das S, Gastier-Foster J, et al. Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. Genet Med. 2015;17(5):405-24. doi:10.1038/gim.2015.30. PMID: 25741868.
+58. Rehm HL, Berg JS, Brooks LD, Bustamante CD, Evans JP, Landrum MJ, et al. ClinGen: the Clinical Genome Resource. N Engl J Med. 2015;372(23):2235-42. doi:10.1056/NEJMsr1406261. PMID: 26014595. Data terms of use (CC0): https://clinicalgenome.org/docs/terms-of-use/
+59. Landrum MJ, Lee JM, Benson M, Brown GR, Chao C, Chitipiralla S, et al. ClinVar: improving access to variant interpretations and supporting evidence. Nucleic Acids Res. 2018;46(D1):D1062-7. doi:10.1093/nar/gkx1153. PMID: 29165669.
+60. Rehm HL, Page AJH, Smith L, Adams JB, Alterovitz G, Babb LJ, et al. GA4GH: international policies and standards for data sharing across genomic research and healthcare. Cell Genom. 2021;1(2):100029. doi:10.1016/j.xgen.2021.100029. PMID: 35072136.
+61. Jacobsen JOB, Baudis M, Baynam GS, Beckmann JS, Beltran S, Buske OJ, et al. The GA4GH Phenopacket schema defines a computable representation of clinical data. Nat Biotechnol. 2022;40(6):817-20. doi:10.1038/s41587-022-01357-4. PMID: 35705716.
+62. HL7 International. HL7 FHIR Genomics Reporting Implementation Guide [implementation guide]. Ann Arbor (MI): HL7 International (current version). Available from: https://build.fhir.org/ig/HL7/genomics-reporting/
+63. Relling MV, Klein TE. CPIC: Clinical Pharmacogenetics Implementation Consortium of the Pharmacogenomics Research Network. Clin Pharmacol Ther. 2011;89(3):464-7. doi:10.1038/clpt.2010.279. PMID: 21270786.
+64. Whirl-Carrillo M, McDonagh EM, Hebert JM, Gong L, Sangkuhl K, Thorn CF, et al. Pharmacogenomics knowledge for personalized medicine. Clin Pharmacol Ther. 2012;92(4):414-7. doi:10.1038/clpt.2012.96. PMID: 22992668.
+65. Garante per la protezione dei dati personali. Provvedimento recante le prescrizioni relative al trattamento di categorie particolari di dati, ai sensi dell'art. 21, comma 1 del d.lgs. 10 agosto 2018, n. 101, n. 146 del 5 giugno 2019 (Gazzetta Ufficiale n. 176 del 29 luglio 2019), doc. web n. 9124510; par. 4 sui dati genetici, modificato dal provvedimento n. 66 del 13 febbraio 2025 (doc. web n. 10112364). Available from: https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9124510
 
 ---
 

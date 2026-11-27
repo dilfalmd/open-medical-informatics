@@ -9,8 +9,8 @@ Uso (dalla cartella del repository):
     python tools/genera_pagine.py --controlla     # solo verifiche, non scrive nulla
 
 Scrive:
-    <sito>/open-medical-informatics/index.html        (italiano)
-    <sito>/en/open-medical-informatics/index.html     (inglese)
+    <sito>/open-health-informatics/index.html        (italiano)
+    <sito>/en/open-health-informatics/index.html     (inglese)
     <sito>/css/curriculum.css   e   <sito>/js/curriculum.js  (copiati da tools/modello/)
 
 Solo libreria standard di Python. L'output e' deterministico: due esecuzioni
@@ -39,11 +39,11 @@ DEFAULT_SITE = ROOT.parent / "siti-web" / "dilettafalcone.it"
 MODELLO = ROOT / "tools" / "modello"
 
 SITE_URL = "https://dilettafalcone.it"
-REPO_URL = "https://github.com/dilfalmd/open-medical-informatics"
+REPO_URL = "https://github.com/dilfalmd/open-health-informatics"
 STYLE_VERSION = "2"  # ?v=N di /css/style.css, come nelle altre pagine del sito
 STORAGE_KEY = "omi-progress-v1"
-PATH_IT = "/open-medical-informatics/"
-PATH_EN = "/en/open-medical-informatics/"
+PATH_IT = "/open-health-informatics/"
+PATH_EN = "/en/open-health-informatics/"
 
 LANGS = {
     "it": {
@@ -52,8 +52,8 @@ LANGS = {
         "og_locale": "it_IT",
         "og_alt_locale": "en_US",
         "path": PATH_IT,
-        "title": "Open Medical Informatics - Diletta Falcone",
-        "description": "Curriculum gratuito di informatica medica per medici, sul modello di OSSU Computer Science.",
+        "title": "Open Health Informatics - Diletta Falcone",
+        "description": "Curriculum gratuito di informatica sanitaria per medici e professionisti della salute, sul modello di OSSU Computer Science.",
         "og_image_alt": "Diletta Falcone, medico chirurgo",
         "nav": [("Percorso", "/percorso/"), ("Progetti", "/progetti/"), ("Contatti", "#contatti")],
         "switch": ("English", PATH_EN, "en"),
@@ -66,6 +66,7 @@ LANGS = {
         "bar_core": "Tronco comune (livelli 0–5)",
         "bar_core_a": "Tronco comune + Indirizzo A",
         "bar_core_b": "Tronco comune + Indirizzo B",
+        "bar_core_c": "Tronco comune + Indirizzo C",
         "btn_export": "Esporta avanzamento",
         "btn_import": "Importa avanzamento",
         "btn_reset": "Azzera",
@@ -78,7 +79,7 @@ LANGS = {
             "export_error": "Non è stato possibile creare il file.",
             "imported": "Avanzamento importato: {n} corsi spuntati.",
             "imported_unknown": "Avanzamento importato: {n} corsi spuntati ({u} voci sconosciute ignorate).",
-            "import_error": "File non valido: non è un avanzamento di Open Medical Informatics.",
+            "import_error": "File non valido: non è un avanzamento di Open Health Informatics.",
             "reset_confirm": "Azzerare tutto l'avanzamento?",
             "reset_done": "Avanzamento azzerato.",
             "done_word": "completati",
@@ -91,8 +92,8 @@ LANGS = {
         "og_locale": "en_US",
         "og_alt_locale": "it_IT",
         "path": PATH_EN,
-        "title": "Open Medical Informatics - Diletta Falcone",
-        "description": "A free medical informatics curriculum for physicians, modelled on OSSU Computer Science.",
+        "title": "Open Health Informatics - Diletta Falcone",
+        "description": "A free health informatics curriculum for physicians and health professionals, modelled on OSSU Computer Science.",
         "og_image_alt": "Diletta Falcone, physician",
         "nav": [("Background", "/percorso/"), ("Projects", "/progetti/"), ("Contact", "#contatti")],
         "switch": ("Italiano", PATH_IT, "it"),
@@ -105,6 +106,7 @@ LANGS = {
         "bar_core": "Common core (levels 0–5)",
         "bar_core_a": "Common core + Track A",
         "bar_core_b": "Common core + Track B",
+        "bar_core_c": "Common core + Track C",
         "btn_export": "Export progress",
         "btn_import": "Import progress",
         "btn_reset": "Reset",
@@ -117,7 +119,7 @@ LANGS = {
             "export_error": "The file could not be created.",
             "imported": "Progress imported: {n} courses ticked.",
             "imported_unknown": "Progress imported: {n} courses ticked ({u} unknown entries ignored).",
-            "import_error": "Invalid file: it is not an Open Medical Informatics progress file.",
+            "import_error": "Invalid file: it is not an Open Health Informatics progress file.",
             "reset_confirm": "Reset all progress?",
             "reset_done": "Progress reset.",
             "done_word": "done",
@@ -129,7 +131,7 @@ LANGS = {
 # Riconoscimento delle sezioni dal titolo H2 (in entrambe le lingue).
 SECTION_PATTERNS = [
     ("level", re.compile(r"^(?:Livello|Level)\s+(\d)\b")),
-    ("track", re.compile(r"^(?:Indirizzo|Track)\s+([AB])\b")),
+    ("track", re.compile(r"^(?:Indirizzo|Track)\s+([ABC])\b")),
     ("electives", re.compile(r"^(?:Approfondimenti|Electives)\b")),
     ("references", re.compile(r"^(?:Bibliografia|References)\b")),
 ]
@@ -565,6 +567,7 @@ def render_page(lang, doc, ids, errors):
     add("          " + bar_html(L["bar_core"], " ".join(core_keys), count_group(doc, core_keys)))
     add("          " + bar_html(L["bar_core_a"], " ".join(core_keys + ["a"]), count_group(doc, core_keys + ["a"])))
     add("          " + bar_html(L["bar_core_b"], " ".join(core_keys + ["b"]), count_group(doc, core_keys + ["b"])))
+    add("          " + bar_html(L["bar_core_c"], " ".join(core_keys + ["c"]), count_group(doc, core_keys + ["c"])))
     add("        </div>")
     add('        <div class="tools">')
     add('          <button type="button" class="btn btn-primary" id="omi-export">%s</button>' % esc(L["btn_export"]))
@@ -762,8 +765,8 @@ def main(argv=None):
 
     dry = args.controlla
     jobs = [
-        (site / "open-medical-informatics" / "index.html", page_it),
-        (site / "en" / "open-medical-informatics" / "index.html", page_en),
+        (site / "open-health-informatics" / "index.html", page_it),
+        (site / "en" / "open-health-informatics" / "index.html", page_en),
         (site / "css" / "curriculum.css", (MODELLO / "curriculum.css").read_text(encoding="utf-8")),
         (site / "js" / "curriculum.js", (MODELLO / "curriculum.js").read_text(encoding="utf-8")),
     ]

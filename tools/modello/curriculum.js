@@ -1,7 +1,7 @@
-/* Open Medical Informatics: avanzamento dei corsi (caselle, barre, esporta, importa).
+/* Open Health Informatics: avanzamento dei corsi (caselle, barre, esporta, importa).
    JavaScript puro. Lo stato sta in localStorage con la stessa chiave nelle due lingue;
    ogni accesso e' in try/catch, e senza localStorage si lavora in memoria.
-   Sorgente: tools/modello/curriculum.js nel repository open-medical-informatics. */
+   Sorgente: tools/modello/curriculum.js nel repository open-health-informatics. */
 (function () {
   'use strict';
 
@@ -137,7 +137,7 @@
     btnExport.addEventListener('click', function () {
       try {
         var data = {
-          app: 'open-medical-informatics',
+          app: 'open-health-informatics',
           version: 1,
           exported: new Date().toISOString(),
           done: checkedIds()
@@ -146,7 +146,7 @@
         var url = URL.createObjectURL(blob);
         var a = document.createElement('a');
         a.href = url;
-        a.download = 'open-medical-informatics-progress.json';
+        a.download = 'open-health-informatics-progress.json';
         a.style.display = 'none';
         document.body.appendChild(a);
         a.click();
